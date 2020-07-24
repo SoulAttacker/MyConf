@@ -33,6 +33,7 @@ filetype indent on
 set tabstop=4
 " 设置自动缩进
 set autoindent
+set expandtab
 " 设置软制表符
 set softtabstop=4
 " 更改缩进方式
@@ -78,11 +79,11 @@ syntax on
 " 插件列表
 call plug#begin('~/.vim/plugged')
 " vim 主页命令
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 
 " vim 状态条
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
 " 文件树
 " File navigation
@@ -96,7 +97,7 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 
 " 书签
 " Bookmarks
-Plug 'kshenoy/vim-signature'
+" Plug 'kshenoy/vim-signature'
 
 
 " ultisnips是引擎
@@ -113,11 +114,11 @@ Plug 'kshenoy/vim-signature'
 
 " 代码美化
 " vim-snazzy
-Plug 'connorholyday/vim-snazzy'
+" Plug 'connorholyday/vim-snazzy'
 
 " vim 主题
 " vim-hybrid
-Plug 'w0ng/vim-hybrid'
+" Plug 'w0ng/vim-hybrid'
 
 " markdown 代码补全
 " Plug 'MarcWeber/vim-addon-mw-utils'
@@ -164,7 +165,7 @@ call plug#end()
 " ===
 " === vim-airline
 " ===
-let g:airline#extensions#tabline#enabled = 1 " 仅打开一个选项卡时自动显示所有缓冲区
+" let g:airline#extensions#tabline#enabled = 1 " 仅打开一个选项卡时自动显示所有缓冲区
 
 
 " ===
@@ -212,10 +213,10 @@ let NERDTreeMapChangeRoot = "y"
 " ===
 " === You Complete Me
 " ===
-nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap g/ :YcmCompleter GetDoc<CR>
-nnoremap gt :YcmCompleter GetType<CR>
-nnoremap gr :YcmCompleter GoToReferences<CR>
+" nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" nnoremap g/ :YcmCompleter GetDoc<CR>
+" nnoremap gt :YcmCompleter GetType<CR>
+" nnoremap gr :YcmCompleter GoToReferences<CR>
 
 " ===
 " === Taglist
@@ -226,29 +227,29 @@ let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 " ===
 " === vim-signiture
 " ===
-let g:SignatureMap = {
-        \ 'Leader'             :  "m",
-        \ 'PlaceNextMark'      :  "m,",
-        \ 'ToggleMarkAtLine'   :  "m.",
-        \ 'PurgeMarksAtLine'   :  "dm-",
-        \ 'DeleteMark'         :  "dm",
-        \ 'PurgeMarks'         :  "dm/",
-        \ 'PurgeMarkers'       :  "dm?",
-        \ 'GotoNextLineAlpha'  :  "m<LEADER>",
-        \ 'GotoPrevLineAlpha'  :  "",
-        \ 'GotoNextSpotAlpha'  :  "m<LEADER>",
-        \ 'GotoPrevSpotAlpha'  :  "",
-        \ 'GotoNextLineByPos'  :  "",
-        \ 'GotoPrevLineByPos'  :  "",
-        \ 'GotoNextSpotByPos'  :  "mn",
-        \ 'GotoPrevSpotByPos'  :  "mp",
-        \ 'GotoNextMarker'     :  "",
-        \ 'GotoPrevMarker'     :  "",
-        \ 'GotoNextMarkerAny'  :  "",
-        \ 'GotoPrevMarkerAny'  :  "",
-        \ 'ListLocalMarks'     :  "m/",
-        \ 'ListLocalMarkers'   :  "m?"
-        \ }
+"	let g:SignatureMap = {
+"			\ 'Leader'             :  "m",
+"			\ 'PlaceNextMark'      :  "m,",
+"			\ 'ToggleMarkAtLine'   :  "m.",
+"			\ 'PurgeMarksAtLine'   :  "dm-",
+"			\ 'DeleteMark'         :  "dm",
+"			\ 'PurgeMarks'         :  "dm/",
+"			\ 'PurgeMarkers'       :  "dm?",
+"			\ 'GotoNextLineAlpha'  :  "m<LEADER>",
+"			\ 'GotoPrevLineAlpha'  :  "",
+"			\ 'GotoNextSpotAlpha'  :  "m<LEADER>",
+"			\ 'GotoPrevSpotAlpha'  :  "",
+"			\ 'GotoNextLineByPos'  :  "",
+"			\ 'GotoPrevLineByPos'  :  "",
+"			\ 'GotoNextSpotByPos'  :  "mn",
+"			\ 'GotoPrevSpotByPos'  :  "mp",
+"			\ 'GotoNextMarker'     :  "",
+"			\ 'GotoPrevMarker'     :  "",
+"			\ 'GotoNextMarkerAny'  :  "",
+"			\ 'GotoPrevMarkerAny'  :  "",
+"			\ 'ListLocalMarks'     :  "m/",
+"			\ 'ListLocalMarkers'   :  "m?"
+"			\ }
 
 " ===
 " === indentLine
@@ -260,9 +261,9 @@ let g:indentLine_color_term = 239 " 设置缩进线的颜色为灰色(RGB)
 " ===
 " === vim-snazzy
 " ===
-let g:lightline = {
-\ 'colorscheme': 'snazzy',
-\ }
+" let g:lightline = {
+" \ 'colorscheme': 'snazzy',
+" \ }
 
 
 

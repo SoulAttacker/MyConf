@@ -53,7 +53,7 @@ set clipboard=unnamedplus
 " 删除改行后跳到上一行继续删除
 set backspace=2
 " 鼠标可用
-set mouse=a
+" set mouse=a
 " 移动问题
 set whichwrap+=<,>,[,],h,l
 " 自动缩进

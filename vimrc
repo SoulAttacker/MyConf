@@ -28,7 +28,6 @@ nnoremap <C-e> <End>
 filetype plugin on
 filetype indent on
 
-
 " 设置缩进
 set tabstop=4
 " 设置自动缩进
@@ -71,10 +70,14 @@ set hls
 highlight Search ctermbg=yellow ctermfg=black 
 highlight IncSearch ctermbg=black ctermfg=yellow 
 highlight MatchParen cterm=underline ctermbg=NONE ctermfg=NONE
+highlight Comment ctermfg=green
 
 " 语法高亮
 syntax enable
 syntax on
+" 注释绿色
+hi Comment ctermfg = green
+
 
 " 插件列表
 call plug#begin('~/.vim/plugged')
@@ -140,7 +143,7 @@ Plug 'Raimondi/delimitMate'
 
 " 彩虹括号
 " rainbow_parentheses
-Plug 'kien/rainbow_parentheses.vim'
+" Plug 'kien/rainbow_parentheses.vim'
 
 " 代码片段
 " Plug 'SirVer/ultisnips'
@@ -261,37 +264,37 @@ let g:indentLine_color_term = 239 " 设置缩进线的颜色为灰色(RGB)
 " ===
 " === vim-snazzy
 " ===
-" let g:lightline = {
-" \ 'colorscheme': 'snazzy',
-" \ }
+"    let g:lightline = {
+"    \ 'colorscheme': 'snazzy',
+"    \ }
 
 
 
-" ===
-" === rainbow_parenthese.vim
-" ===
-let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['black',       'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
-" make it always on
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
+"    " ===
+"    " === rainbow_parenthese.vim
+"    " ===
+"    let g:rbpt_colorpairs = [
+"        \ ['brown',       'RoyalBlue3'],
+"        \ ['Darkblue',    'SeaGreen3'],
+"        \ ['darkgray',    'DarkOrchid3'],
+"        \ ['darkgreen',   'firebrick3'],
+"        \ ['darkcyan',    'RoyalBlue3'],
+"        \ ['darkred',     'SeaGreen3'],
+"        \ ['darkmagenta', 'DarkOrchid3'],
+"        \ ['brown',       'firebrick3'],
+"        \ ['gray',        'RoyalBlue3'],
+"        \ ['black',       'SeaGreen3'],
+"        \ ['darkmagenta', 'DarkOrchid3'],
+"        \ ['Darkblue',    'firebrick3'],
+"        \ ['darkgreen',   'RoyalBlue3'],
+"        \ ['darkcyan',    'SeaGreen3'],
+"        \ ['darkred',     'DarkOrchid3'],
+"        \ ['red',         'firebrick3'],
+"        \ ]
+"    let g:rbpt_max = 16
+"    let g:rbpt_loadcmd_toggle = 0
+"    " make it always on
+"    au VimEnter * RainbowParenthesesToggle
+"    au Syntax * RainbowParenthesesLoadRound
+"    au Syntax * RainbowParenthesesLoadSquare
 

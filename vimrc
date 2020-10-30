@@ -3,6 +3,7 @@ map S <nop>
 map S :w<CR>
 map SQ :wq<CR>
 map Q! :q!<CR>
+map <F5> :QuickRun<CR>
 
 " 插入模式
 inoremap  <C-h> <Left>
@@ -28,6 +29,8 @@ nnoremap <C-e> <End>
 filetype plugin on
 filetype indent on
 
+" 设置LEADER
+let mapleader = "\<space>"
 " 设置缩进
 set tabstop=4
 " 设置自动缩进
@@ -67,6 +70,13 @@ set softtabstop=4
 set tabstop=4
 " 查找高亮
 set hls
+" 状态栏
+set laststatus=2
+set statusline=%=%1*\KEEP\ GOING\ THIS\ FUCKING\ ROAD!!!\%*
+hi User1 cterm=bold ctermfg=255 ctermbg=0
+hi StatusLine ctermbg=none cterm=bold
+
+" 语法和查找高亮
 highlight Search ctermbg=yellow ctermfg=black 
 highlight IncSearch ctermbg=black ctermfg=yellow 
 highlight MatchParen cterm=underline ctermbg=NONE ctermfg=NONE
@@ -93,6 +103,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+" Haskell
+Plug 'jaspervdj/stylish-haskell'
 
 " 函数列表
 " Taglist
@@ -129,10 +141,6 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 
 " Use release branch (Recommend)
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Or build from source code by use yarn: https://yarnpkg.com
-" Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-
 " 代码补全
 " YouCompleteMe
 " Plug 'Valloric/YouCompleteMe'
@@ -158,8 +166,9 @@ Plug 'ervandew/supertab'
 " 复制高亮
 Plug 'machakann/vim-highlightedyank'
 
+" 快速运行
+Plug 'thinca/vim-quickrun'
 call plug#end()
-
 
 " -------------------------------------------------------------------
 
@@ -297,4 +306,3 @@ let g:indentLine_color_term = 239 " 设置缩进线的颜色为灰色(RGB)
 "    au VimEnter * RainbowParenthesesToggle
 "    au Syntax * RainbowParenthesesLoadRound
 "    au Syntax * RainbowParenthesesLoadSquare
-

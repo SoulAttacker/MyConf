@@ -5,13 +5,13 @@
     (add-hook 'before-save-hook 'gofmt-before-save)
     ))
 
-;; (use-package auto-complete)
-;; (use-package go-autocomplete
-;;   :ensure t
-;;   :config
-;;   (require 'auto-complete-config)
-;;   (ac-config-default)
-;;   )
+(use-package auto-complete)
+(use-package go-autocomplete
+  :ensure t
+  :config
+  (require 'auto-complete-config)
+  (ac-config-default)
+  )
 
 (when (memq window-system '(mac ns))
   (use-package exec-path-from-shell)
@@ -39,6 +39,11 @@
 (use-package go-guru
   :defer t
   :hook (go-mode . go-guru-hl-identifier-mode))
+
+(add-hook 'go-mode-hook
+(lambda ()
+(setq tab-width 4)))
+
 
 ;; go get -u -v golang.org/x/tools/cmd/...
 ;; go get -u -v github.com/rogpeppe/godef

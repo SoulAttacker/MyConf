@@ -2,6 +2,9 @@
   :mode ("\\.py" . python-mode)
   :ensure t)
 
+(add-hook 'python-mode-hook
+    (lambda () (setq indent-tabs-mode t)))
+
 (use-package pyvenv)
 
 (use-package python-black

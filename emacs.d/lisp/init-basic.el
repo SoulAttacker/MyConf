@@ -14,18 +14,18 @@
 (setq linum-format "%d ")
 
 ;; tab缩进
-(setq c-basic-offset 4)
-(setq c-default-style "linux")
-(setq default-tab-width 4)
-(setq tab-width 4
-      inhibit-splash-screen t
-      initial-scratch-message nil
-      sentence-end-double-space nil
-      make-backup-files nil
-      indent-tabs-mode nil
-      make-backup-files nil
-      auto-save-default nil)
-(setq create-lockfiles nil)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+;; (setq custom-tab-width 4)
+;; (setq-default python-indent-offset custom-tab-width)
+;; (setq-default evil-shift-width custom-tab-width)
+;; (setq c-basic-offset 4)
+;; (setq c-default-style "linux")
+;; (setq default-tab-width 4)
+;; (setq create-lockfiles nil)
+
+(electric-pair-mode 1)
 
 ;; 字体
 (set-frame-font "Monaco-14")

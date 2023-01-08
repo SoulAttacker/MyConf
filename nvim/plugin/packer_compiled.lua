@@ -76,117 +76,112 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["Comment.nvim"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
   LuaSnip = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["bufferline.nvim"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-cmdline"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-path"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/cmp-path",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["dracula.nvim"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/dracula.nvim",
     url = "https://github.com/Mofiqul/dracula.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-dap"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-navic"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/nvim-navic",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/nvim-navic",
     url = "https://github.com/SmiteshP/nvim-navic"
-  },
-  ["nvim-treesitter"] = {
-    loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["toggleterm.nvim"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["which-key.nvim"] = {
     loaded = true,
-    path = "/Users/soulwalker/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
   }
 }

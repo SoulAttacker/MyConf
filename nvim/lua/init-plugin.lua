@@ -1,4 +1,4 @@
-return require('packer').startup(function(use)
+return require('packer').startup({function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
@@ -36,7 +36,7 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-dap'
 
   -- treesitter for highlight
-  use 'nvim-treesitter/nvim-treesitter'
+  -- use 'nvim-treesitter/nvim-treesitter'
 
   -- nvim gps for showing scope in code 
   use {
@@ -58,4 +58,10 @@ return require('packer').startup(function(use)
 
 
 
-end)
+  end,
+
+  config = {
+    package_root = "/Users/soulwalker/.config/nvim/pack/"
+  }
+
+})

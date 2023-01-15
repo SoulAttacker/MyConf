@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["dracula.nvim"] = {
-    loaded = true,
-    path = "/Users/soulwalker/.config/nvim/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/gitsigns.nvim",
@@ -128,6 +123,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
+  },
+  ["monokai.nvim"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/monokai.nvim",
+    url = "https://github.com/tanvirtin/monokai.nvim"
+  },
+  ["neovim-cmake"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/neovim-cmake",
+    url = "https://github.com/Shatur/neovim-cmake"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -154,6 +159,16 @@ _G.packer_plugins = {
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/nvim-navic",
     url = "https://github.com/SmiteshP/nvim-navic"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/nvim-web-devicons",
@@ -168,6 +183,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["symbols-outline.nvim"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/symbols-outline.nvim",
+    url = "https://github.com/simrat39/symbols-outline.nvim"
+  },
+  ["telescope-live-grep-raw.nvim"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/telescope-live-grep-raw.nvim",
+    url = "https://github.com/nvim-telescope/telescope-live-grep-raw.nvim"
+  },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/telescope-ui-select.nvim",
+    url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

@@ -2,8 +2,8 @@ return require('packer').startup({function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- dracula for theme
-  use 'Mofiqul/dracula.nvim'
+  -- monokai for theme
+  use 'tanvirtin/monokai.nvim'
 
   -- lsp for compl
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
@@ -18,7 +18,7 @@ return require('packer').startup({function(use)
   use 'hrsh7th/cmp-cmdline'
 
   -- lspaga for lsp ui
-  use 'glepnir/lspsaga.nvim'
+  use {'glepnir/lspsaga.nvim', branch = 'version_2.2'}
 
   -- comment for comment code
   use 'numToStr/Comment.nvim'
@@ -28,6 +28,8 @@ return require('packer').startup({function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'nvim-telescope/telescope-ui-select.nvim'
+  use 'nvim-telescope/telescope-live-grep-raw.nvim'
 
   -- bufferline for up buffer line
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
@@ -36,7 +38,7 @@ return require('packer').startup({function(use)
   use 'mfussenegger/nvim-dap'
 
   -- treesitter for highlight
-  -- use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-treesitter/nvim-treesitter'
 
   -- nvim gps for showing scope in code 
   use {
@@ -56,6 +58,21 @@ return require('packer').startup({function(use)
   -- toggleterm for terminal
   use {"akinsho/toggleterm.nvim", tag = '*'}
 
+
+  -- nvim tree for file explore
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly'
+  }
+
+  -- symbols-outline for outline
+  use 'simrat39/symbols-outline.nvim'
+
+  -- cmake
+  use 'Shatur/neovim-cmake'
 
 
   end,

@@ -18,12 +18,13 @@ return require('packer').startup({function(use)
   use 'hrsh7th/cmp-cmdline'
 
   -- lspaga for lsp ui
-  use {'glepnir/lspsaga.nvim', branch = 'version_2.2'}
+  -- use {'glepnir/lspsaga.nvim', branch = 'version_2.2'}
+  use {'glepnir/lspsaga.nvim', branch = 'main'}
 
   -- comment for comment code
   use 'numToStr/Comment.nvim'
 
-  -- telescope for 
+  -- telescope for fuzzy search
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
@@ -74,6 +75,17 @@ return require('packer').startup({function(use)
   -- cmake
   use 'Shatur/neovim-cmake'
 
+  -- code runner
+  use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+  -- todo comment for highlight todo/fix
+  use { 'folke/todo-comments.nvim', requires = "nvim-lua/plenary.nvim" }
+
+  -- neogen for comment generation
+  use { 'danymat/neogen', requires = "nvim-treesitter/nvim-treesitter" }
+
+  -- lsp_signature
+  use "ray-x/lsp_signature.nvim"
 
   end,
 

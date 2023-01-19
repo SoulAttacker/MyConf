@@ -17,4 +17,7 @@ require('conf.tree')
 require('conf.symbols-outline')
 require('conf.cmake')
 require('conf.whichkey')
+require('conf.coderunner')
+require('conf.todocomment')
+require('conf.neogen')
 

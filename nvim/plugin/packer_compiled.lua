@@ -114,10 +114,20 @@ _G.packer_plugins = {
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["code_runner.nvim"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/code_runner.nvim",
+    url = "https://github.com/CRAG666/code_runner.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
@@ -128,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/monokai.nvim",
     url = "https://github.com/tanvirtin/monokai.nvim"
+  },
+  neogen = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/neogen",
+    url = "https://github.com/danymat/neogen"
   },
   ["neovim-cmake"] = {
     loaded = true,
@@ -203,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
   },
   ["toggleterm.nvim"] = {
     loaded = true,

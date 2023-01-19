@@ -133,6 +133,11 @@ local mappings = {
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
 
+  g = {
+    name = "GenDoc",
+    d = { "<cmd>Neogen<CR>", "DocGen"},
+  },
+
   t = {
     name = "Terminal",
     t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },

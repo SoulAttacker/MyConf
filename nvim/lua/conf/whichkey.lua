@@ -67,7 +67,6 @@ local opts = {
 }
 
 local mappings = {
-  ["r"] = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["C"] = { "<cmd>%bd|e#<CR>", "Close Other Buffers" },
@@ -136,6 +135,12 @@ local mappings = {
   g = {
     name = "GenDoc",
     d = { "<cmd>Neogen<CR>", "DocGen"},
+  },
+
+  r = {
+    name = "RunCode",
+    r = { "<cmd>RunCode<CR>", "RunCode"},
+    f = { "<cmd>RunFile<CR>", "RunFile"},
   },
 
   t = {

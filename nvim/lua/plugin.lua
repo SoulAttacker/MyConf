@@ -87,6 +87,9 @@ return require('packer').startup({function(use)
   -- lsp_signature
   use "ray-x/lsp_signature.nvim"
 
+  -- statusline for status line
+  -- use 'beauwilliams/statusline.lua'
+
   end,
 
   config = {

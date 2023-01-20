@@ -75,6 +75,8 @@ keymap({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true 
 -- Rename
 keymap("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
 
+keymap('i', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', { silent = true})
+
 -- Peek Definition
 -- you can edit the definition file in this flaotwindow
 -- also support open/vsplit/etc operation check definition_action_keys
@@ -112,6 +114,7 @@ keymap("n", "<A-d>", "<cmd>Lspsaga open_floaterm<CR>", { silent = true })
 keymap("n", "<A-d>", "<cmd>Lspsaga open_floaterm lazygit<CR>", { silent = true })
 -- close floaterm
 keymap("t", "<A-d>", [[<C-\><C-n><cmd>Lspsaga close_floaterm<CR>]], { silent = true })
+
 
 
 -- 
@@ -378,7 +381,7 @@ local cfg = {
 }
 
 -- recommended:
-require'lsp_signature'.setup(cfg) -- no need to specify bufnr if you don't use toggle_key
+-- require'lsp_signature'.setup(cfg) -- no need to specify bufnr if you don't use toggle_key
 
 -- You can also do this inside lsp on_attach
 -- note: on_attach deprecated

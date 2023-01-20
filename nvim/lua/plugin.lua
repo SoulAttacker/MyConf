@@ -85,11 +85,13 @@ return require('packer').startup({function(use)
   use { 'danymat/neogen', requires = "nvim-treesitter/nvim-treesitter" }
 
   -- lsp_signature
-  use "ray-x/lsp_signature.nvim"
+  use 'ray-x/lsp_signature.nvim'
 
   -- statusline for status line
   -- use 'beauwilliams/statusline.lua'
 
+  -- code action menu for code action
+  use ({'weilbith/nvim-code-action-menu', cmd="CodeActionMenu"})
   end,
 
   config = {

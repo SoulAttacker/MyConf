@@ -102,7 +102,7 @@ local mappings = {
     t = {"<cmd>CMake select_target<CR>", "SelectTarget"},
     T = {"<cmd>CMake select_build_type<CR>", "SelectBuildType"},
     b = {"<cmd>CMake build<CR>", "BuildTarget"},
-    a = {"<cmd>CMake build_all<CR>", "BuildAll"},
+    l = {"<cmd>CMake build_all<CR>", "BuildAll"},
     r = {"<cmd>CMake build_and_run<CR>", "Run"},
     d = {"<cmd>CMake build_and_debug<CR>", "DebugTarget"},
     c = {"<cmd>CMake cancel<CR>", "Cancel"},
@@ -122,6 +122,11 @@ local mappings = {
 
   },
 
+  g = {
+    name = "GenDoc",
+    d = { "<cmd>Neogen<CR>", "DocGen"},
+  },
+
   h = {
     name = "Help",
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
@@ -132,9 +137,9 @@ local mappings = {
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
 
-  g = {
-    name = "GenDoc",
-    d = { "<cmd>Neogen<CR>", "DocGen"},
+  l = {
+    name = "LSP",
+    c = { "<cmd>CodeActionMenu<CR>", "CodeAction"},
   },
 
   r = {

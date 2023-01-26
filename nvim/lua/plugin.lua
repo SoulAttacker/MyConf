@@ -87,11 +87,19 @@ return require('packer').startup({function(use)
   -- lsp_signature
   use 'ray-x/lsp_signature.nvim'
 
-  -- statusline for status line
-  -- use 'beauwilliams/statusline.lua'
 
   -- code action menu for code action
   use ({'weilbith/nvim-code-action-menu', cmd="CodeActionMenu"})
+
+  -- windline for status line
+  use 'windwp/windline.nvim'
+
+  -- carbon-now for snippets
+  use 'ellisonleao/carbon-now.nvim'
+
+  -- dashboard
+  use 'glepnir/dashboard-nvim'
+
   end,
 
   config = {

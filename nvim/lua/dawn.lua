@@ -20,5 +20,7 @@ require('conf.whichkey')
 require('conf.coderunner')
 require('conf.todocomment')
 require('conf.neogen')
+require('conf.windline')
+require('conf.dashboard')
 -- require('conf.statusline')
 

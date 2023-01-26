@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  ["carbon-now.nvim"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/carbon-now.nvim",
+    url = "https://github.com/ellisonleao/carbon-now.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/cmp-buffer",
@@ -118,6 +123,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/code_runner.nvim",
     url = "https://github.com/CRAG666/code_runner.nvim"
+  },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -241,6 +251,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
+  },
+  ["windline.nvim"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/windline.nvim",
+    url = "https://github.com/windwp/windline.nvim"
   }
 }
 

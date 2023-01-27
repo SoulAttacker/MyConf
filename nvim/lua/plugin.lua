@@ -39,6 +39,7 @@ return require('packer').startup({function(use)
   use 'mfussenegger/nvim-dap'
 
   -- treesitter for highlight
+  use 'p00f/nvim-ts-rainbow'
   use 'nvim-treesitter/nvim-treesitter'
 
   -- nvim gps for showing scope in code 

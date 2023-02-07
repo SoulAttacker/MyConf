@@ -3,7 +3,11 @@ return require('packer').startup({function(use)
   use 'wbthomason/packer.nvim'
 
   -- monokai for theme
-  use 'tanvirtin/monokai.nvim'
+  -- use 'tanvirtin/monokai.nvim'
+  -- nord for theme
+  -- use 'shaunsingh/nord.nvim'
+  -- tokyonight for theme
+  use 'folke/tokyonight.nvim'
 
   -- lsp for compl
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
@@ -100,6 +104,8 @@ return require('packer').startup({function(use)
 
   -- dashboard
   use 'glepnir/dashboard-nvim'
+
+
 
   end,
 

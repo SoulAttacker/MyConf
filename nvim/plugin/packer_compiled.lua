@@ -144,11 +144,6 @@ _G.packer_plugins = {
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
   },
-  ["monokai.nvim"] = {
-    loaded = true,
-    path = "/Users/soulwalker/.config/nvim/pack/packer/start/monokai.nvim",
-    url = "https://github.com/tanvirtin/monokai.nvim"
-  },
   neogen = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/neogen",
@@ -251,6 +246,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["which-key.nvim"] = {
     loaded = true,

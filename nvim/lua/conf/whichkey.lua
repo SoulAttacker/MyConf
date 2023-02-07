@@ -90,7 +90,8 @@ local mappings = {
 
   b = {
     name = "Buffer",
-    a = {"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "AllBuffer"},
+    -- a = {"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "AllBuffer"},
+    a = {"<cmd>Telescope buffers<cr>", "AllBuffer"},
     n = {"<cmd>bn<cr>", "NextBuffer"},
     p = {"<cmd>bp<cr>", "PreviousBuffer"},
     c = {"<cmd>bdelete%<cr>", "CloseCurrentBuffer"}

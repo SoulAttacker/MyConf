@@ -102,10 +102,11 @@ return require('packer').startup({function(use)
   -- carbon-now for snippets
   use 'ellisonleao/carbon-now.nvim'
 
-  -- dashboard
-  use 'glepnir/dashboard-nvim'
+  -- session manager 
+  use 'Shatur/neovim-session-manager'
 
-
+  -- code format
+  use("mhartington/formatter.nvim")
 
   end,
 

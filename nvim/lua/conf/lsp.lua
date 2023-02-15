@@ -5,10 +5,11 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 
+
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd',  'pylsp', 'cmake', 'sumneko_lua', 'rust_analyzer' }
+local servers = { 'clangd',  'pylsp', 'cmake', 'lua_ls', 'rust_analyzer', 'hls'}
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
@@ -82,6 +83,7 @@ keymap('i', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', { silent = tru
 -- also support open/vsplit/etc operation check definition_action_keys
 -- support tagstack C-t jump back
 keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+keymap("n", "gD", "<cmd>Lspsaga goto_definition<CR>", { silent = true })
 
 -- Show line diagnostics
 keymap("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })

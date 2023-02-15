@@ -124,10 +124,10 @@ _G.packer_plugins = {
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/code_runner.nvim",
     url = "https://github.com/CRAG666/code_runner.nvim"
   },
-  ["dashboard-nvim"] = {
+  ["formatter.nvim"] = {
     loaded = true,
-    path = "/Users/soulwalker/.config/nvim/pack/packer/start/dashboard-nvim",
-    url = "https://github.com/glepnir/dashboard-nvim"
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -153,6 +153,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/soulwalker/.config/nvim/pack/packer/start/neovim-cmake",
     url = "https://github.com/Shatur/neovim-cmake"
+  },
+  ["neovim-session-manager"] = {
+    loaded = true,
+    path = "/Users/soulwalker/.config/nvim/pack/packer/start/neovim-session-manager",
+    url = "https://github.com/Shatur/neovim-session-manager"
   },
   ["nvim-autopairs"] = {
     loaded = true,

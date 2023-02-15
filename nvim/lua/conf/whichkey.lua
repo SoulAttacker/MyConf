@@ -88,6 +88,11 @@ local mappings = {
     "Outline"
   },
 
+  ["N"] = {
+    "<cmd>SessionManager load_session<cr>",
+    "Session"
+  },
+
   b = {
     name = "Buffer",
     -- a = {"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "AllBuffer"},
@@ -141,6 +146,7 @@ local mappings = {
   l = {
     name = "LSP",
     c = { "<cmd>CodeActionMenu<CR>", "CodeAction"},
+    f = { "<cmd>Format<CR>", "CodeFormat"}
   },
 
   r = {

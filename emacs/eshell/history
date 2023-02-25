@@ -1,21 +1,13 @@
 ls
-clear
-clear
 cd ..
 ls
-cd elpa/
-ls
-git clone https://github.com/manateelazycat/lsp-bridge.git
-exit
+cd tools/
 ls
 clear
-ll -rt
-ls -al
-rm test.*
-rm tst.cpp 
 ls
-clear
-exit
-ls
+touch init-tools.el
+touch init-restart-emacs.el
+touch init-evil.el
+touch init-ivy.el
 clear
 exit

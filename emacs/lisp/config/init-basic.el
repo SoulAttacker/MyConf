@@ -24,13 +24,8 @@
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 
-;; set nu
-(global-display-line-numbers-mode t)
-(dolist (mode '(org-mode-hook
-                shell-mode-hook
-                term-mode-hook
-                eshell-mode-hook))
-  (add-hook mode (lambda() (dispaly-line-numbers-mode 0))))
+;; show line number when in prog-mode
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 
 ;; backup

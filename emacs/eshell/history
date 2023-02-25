@@ -11,3 +11,6 @@ touch init-evil.el
 touch init-ivy.el
 clear
 exit
+ls
+exit
+exit

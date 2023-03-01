@@ -7,6 +7,7 @@
 
 ;; Defer garbage collection
 (setq gc-cons-threshold most-positive-fixnum)
+(add-hook 'after-init-hook #'(lambda () (setq gc-cons-threshold 800000)))
 
 ;; load path
 ;; Force "lisp"" and "elpa" at the head to reduce the startup time.
@@ -25,4 +26,5 @@
 ;; configuration start
 (require 'init-config)
 (require 'init-tools)
+(require 'init-lang)
 

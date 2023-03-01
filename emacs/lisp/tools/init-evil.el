@@ -11,6 +11,7 @@
 ;; package: evil
 (use-package evil
   :ensure t
+  :init
   :config
   (evil-mode 1)
 
@@ -32,20 +33,5 @@
   (evil-global-set-key 'motion "j" 'evil-next-visual-line)
   (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
 )
-
-;; package: evil-leader
-(use-package evil-leader
-  :ensure t
-  :config
-  (global-evil-leader-mode)
-  (evil-leader/set-leader "<SPC>")
-  (evil-leader/set-key
-    "<SPC>" 'smex
-    "ff" 'find-file
-    "b" 'counsel-switch-buffer
-    "e" 'treemacs
-    )
-)
-
   
 (provide 'init-evil)

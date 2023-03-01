@@ -14,3 +14,12 @@ exit
 ls
 exit
 exit
+curl -v www.google.com
+curl -v www.google.com
+curl -v http://www.google.com
+ls
+ll -rt
+rm ./init-helm.el 
+ls
+clear
+exit

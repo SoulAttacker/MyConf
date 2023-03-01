@@ -72,4 +72,9 @@
 ;; replace yes-or-no with y-or-n
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; confirm to exit emacs
+;; (add-hook 'kill-emacs-query-functions
+;;           (lambda () (y-or-n-p "Do you really want to exit Emacs? "))
+;;           'append)
+
 (provide 'init-basic)

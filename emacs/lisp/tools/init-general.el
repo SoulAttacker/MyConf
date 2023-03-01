@@ -24,10 +24,13 @@
 (my-leader-def
  "b" '(:wk "Buffer")
  "bb" '(counsel-switch-buffer :wk "switch buffer")
- "bk" '(kill-buffer :wk "kill-buffer")
+ "bk" '(kill-this-buffer :wk "kill-this-buffer")
+ "bn" '(next-buffer :wk "next-buffer")
+ "bp" '(previous-buffer :wk "previous-buffer")
+ "bK" '(kill-buffer :wk "kill-buffer")
 
  "f" '(:wk "File")
- "ff" '(find-file :wk "find-file")
+ "ff" '(counsel-find-file :wk "find-file")
 
  )
 

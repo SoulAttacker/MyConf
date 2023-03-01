@@ -9,5 +9,6 @@
 
 (require 'init-lsp)
 (require 'init-cc)
+(require 'init-docstr)
 
 (provide 'init-lang)

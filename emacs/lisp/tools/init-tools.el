@@ -9,11 +9,11 @@
 ;;; Code:
 
 (require 'init-whichkey)
-(require 'init-ivy)
 (require 'init-evil)
 (require 'init-format-all)
 
 ;; maybe should at tail
 (require 'init-general)
+(require 'init-ivy)
 
 (provide 'init-tools)

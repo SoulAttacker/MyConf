@@ -24,7 +24,7 @@
          ("C-k" . ivy-previous-line)
          ("C-d" . ivy-reverse-i-search-kill))
   :config
-  (ivy-mode 1))
+  (ivy-mode nil))
 
 ;; package: counsel
 (use-package counsel

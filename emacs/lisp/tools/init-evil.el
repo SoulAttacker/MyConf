@@ -15,6 +15,9 @@
   :config
   (evil-mode 1)
 
+  ;;
+  ;; insert mode
+  ;; 
   ;; activate C-a C-e in insert mode 
   (define-key evil-insert-state-map (kbd "C-a") 'move-beginning-of-line)
   (define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
@@ -25,9 +28,18 @@
   (define-key evil-insert-state-map (kbd "C-k") 'previous-line)
   (define-key evil-insert-state-map (kbd "C-l") 'forward-char)
 
+  ;;
+  ;; normal mode
+  ;;
   ;; activate C-a C-e in normal mode
   (define-key evil-normal-state-map (kbd "C-a") 'move-beginning-of-line)
   (define-key evil-normal-state-map (kbd "C-e") 'move-end-of-line)
+
+  ;; ivy config
+  (define-key evil-normal-state-map (kbd "M-x") 'counsel-M-x)
+  (define-key evil-normal-state-map (kbd "C-x C-f") 'counsel-find-file)
+  (define-key evil-normal-state-map (kbd "C-s") 'swiper)
+  (define-key evil-normal-state-map (kbd "/") 'swiper)
 
   ;; bind visual `line`-side motion with j/k
   (evil-global-set-key 'motion "j" 'evil-next-visual-line)

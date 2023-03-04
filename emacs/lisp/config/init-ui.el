@@ -9,11 +9,15 @@
 ;;; Code:
 
 ;; package: kaolin-themes
-(use-package kaolin-themes
-  :config
-  (load-theme 'kaolin-valley-light t)
-  (kaolin-treemacs-theme))
+;; (use-package kaolin-themes
+;;   :config
+;;   (load-theme 'kaolin-valley-light t)
+;;   (kaolin-treemacs-theme))
 
+(use-package solo-jazz-theme
+  :ensure t
+  :config
+  (load-theme 'solo-jazz t))
 
 ;; package: all-the-icons
 (use-package all-the-icons

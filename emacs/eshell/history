@@ -23,3 +23,15 @@ rm ./init-helm.el
 ls
 clear
 exit
+ls
+python test.py 
+python test.py 
+  File "test.py", line 11, in __init__
+clear
+which python
+source ~/.bashrc
+lear
+clear
+nvidia-smi
+clear
+exit

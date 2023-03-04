@@ -30,7 +30,13 @@
   (setq lsp-auto-guess-root t
 	    lsp-headerline-breadcrumb-enable nil
 	    lsp-keymap-prefix "C-c l"
-	    lsp-log-io nil)
+	    lsp-log-io nil
+        lsp-headerline-breadcrumb-enable t
+        lsp-headerline-breadcrumb-segments '(project file symbols)
+        lsp-headerline-breadcrumb-icons-enable t
+        lsp-signature-auto-activate t
+        lsp-modeline-diagnostics-enable t
+        )
   (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
 )
 
@@ -45,6 +51,12 @@
           )
     (add-hook 'lsp-mode-hook 'lsp-ui-mode)
     (add-hook 'lsp-ui-mode-hook 'lsp-modeline-code-actions-mode))
+
+;; package: lsp-treemacs
+(use-package lsp-treemacs
+  :config
+  (lsp-treemacs-sync-mode 1)
+)
 
 ;; package: lsp-ivy
 (use-package lsp-ivy
@@ -61,5 +73,12 @@
 ;; package: company-box
 (use-package company-box
   :hook (company-mode . company-box-mode))
+
+;; package: flycheck
+(use-package flycheck
+  :ensure t)
+
+(use-package dap-mode
+  :ensure t)
 
 (provide 'init-lsp)

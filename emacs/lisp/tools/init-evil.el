@@ -12,6 +12,8 @@
 (use-package evil
   :ensure t
   :init
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
   :config
   (evil-mode 1)
 
@@ -45,5 +47,12 @@
   (evil-global-set-key 'motion "j" 'evil-next-visual-line)
   (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
 )
+
+;; package: evil-collection
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :config
+  (evil-collection-init))
   
 (provide 'init-evil)

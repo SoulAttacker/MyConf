@@ -14,6 +14,11 @@
   (general-evil-setup t)
 )
 
+(defun open-my-configuration ()
+  "Open my config file."
+  (interactive)
+  (counsel-find-file user-emacs-directory))
+
 
 ;; func to define my leader key map
 (general-create-definer my-leader-def
@@ -31,6 +36,10 @@
 
  "f" '(:wk "File")
  "ff" '(counsel-find-file :wk "find-file")
+
+ "p" '(:wk "Project")
+ "pp" '(open-my-configuration :wk "personal-config")
+ "pP" '(projectile-command-map :wk "projectile-command")
 
  )
 

@@ -11,6 +11,7 @@
 (require 'init-whichkey)
 (require 'init-evil)
 (require 'init-format-all)
+(require 'init-projectile)
 
 ;; maybe should at tail
 (require 'init-general)

@@ -31,13 +31,10 @@
   :after ivy
   :bind (("M-x" . counsel-M-x)
          ("C-x b" . counsel-ibuffer)
-         ("C-x C-f" . counsel-find-file)
-         :map minibuffer-local-map
-         ("C-r" . 'consel-minibuffer-history)))
+         ("C-x C-f" . counsel-find-file)))
 
 ;; package :swiper
 (use-package swiper
-  :after ivy
-  :bind (("C-r" . swiper-isearch-backward)))
+  :after ivy)
 
 (provide 'init-ivy)

@@ -12,15 +12,15 @@
 (use-package evil
   :ensure t
   :init
-  (setq evil-want-integration t)
   (setq evil-want-keybinding nil)
+  (setq evil-want-integration t)
   :config
   (evil-mode 1)
 
   ;;
   ;; insert mode
-  ;; 
-  ;; activate C-a C-e in insert mode 
+  ;;
+  ;; activate C-a C-e in insert mode
   (define-key evil-insert-state-map (kbd "C-a") 'move-beginning-of-line)
   (define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
 
@@ -46,7 +46,7 @@
   ;; bind visual `line`-side motion with j/k
   (evil-global-set-key 'motion "j" 'evil-next-visual-line)
   (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
-)
+  )
 
 ;; package: evil-collection
 (use-package evil-collection
@@ -54,5 +54,5 @@
   :ensure t
   :config
   (evil-collection-init))
-  
+
 (provide 'init-evil)

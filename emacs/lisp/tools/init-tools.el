@@ -10,8 +10,11 @@
 
 (require 'init-whichkey)
 (require 'init-evil)
+(require 'init-treemacs)
 (require 'init-format-all)
 (require 'init-projectile)
+(require 'init-pdf-tools)
+(require 'init-vterm)
 
 ;; maybe should at tail
 (require 'init-general)

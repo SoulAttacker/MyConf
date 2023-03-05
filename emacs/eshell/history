@@ -26,7 +26,7 @@ exit
 ls
 python test.py 
 python test.py 
-  File "test.py", line 11, in __init__
+File "test.py", line 11, in __init__
 clear
 which python
 source ~/.bashrc
@@ -35,3 +35,4 @@ clear
 nvidia-smi
 clear
 exit
+curl -v www.google.com

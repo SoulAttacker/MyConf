@@ -1,4 +1,6 @@
-(use-package python-insert-docstring
-  :ensure nil)
+(use-package conda
+  :ensure t
+  :config
+  (setq conda-anaconda-home "/Users/soulwalker/miniconda3"))
 
 (provide 'init-python)

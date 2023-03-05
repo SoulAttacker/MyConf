@@ -34,12 +34,25 @@
  "bp" '(previous-buffer :wk "previous-buffer")
  "bK" '(kill-buffer :wk "kill-buffer")
 
+ "e" '(treemacs :wk "treemacs")
+
  "f" '(:wk "File")
  "ff" '(counsel-find-file :wk "find-file")
+
+ "h" '(:wk "Help")
+ "hr" '(restart-emacs :wk "restart-emacs")
+
+ "l" '(:wk "Language")
+ "lf" '(format-all-buffer :wk "format-buffer")
+
 
  "p" '(:wk "Project")
  "pp" '(open-my-configuration :wk "personal-config")
  "pP" '(projectile-command-map :wk "projectile-command")
+
+ "t" '(:wk "Terminal")
+ "tt" '(vterm-other-window :wk "vterm-other-window")
+ "tv" '(vterm :wk "vertm-new-window")
 
  )
 

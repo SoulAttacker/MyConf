@@ -27,6 +27,12 @@
 (use-package doom-modeline
   :ensure t
   :hook (after-init . doom-modeline-mode)
+  :config
+  (setq doom-modeline-height 1) ; optional
+  (custom-set-faces
+   '(mode-line ((t (:family "CaskaydiaCove Nerd Font" :height 0.9))))
+   '(mode-line-active ((t (:family "CaskaydiaCove Nerd Font" :height 0.9)))) ; For 29+
+   '(mode-line-inactive ((t (:family "CaskaydiaCove Nerd Font" :height 0.9)))))
   )
 
 ;; package: dashboard
@@ -72,12 +78,11 @@
   (calendar-mode . centaur-tabs-local-mode)
   (org-agenda-mode . centaur-tabs-local-mode))
 
-;; package: indent-guide
-(use-package indent-guide
-  :ensure t
-  :hook
-  (prog-mode . indent-guide-mode)
-  :config
-  (setq indent-guide-recursive t))
+;; package: highlight-indent-guide
+(use-package highlight-indent-guides
+  :hook ((prog-mode . highlight-indent-guides-mode))
+  :init
+  (setq highlight-indent-guides-method 'character
+        highlight-indent-guides-reponsive 'top))
 
 (provide 'init-ui)

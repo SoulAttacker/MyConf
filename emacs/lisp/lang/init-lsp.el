@@ -54,21 +54,24 @@
 
 ;; package: lsp-treemacs
 (use-package lsp-treemacs
+  :after lsp-mode
   :config
   (lsp-treemacs-sync-mode 1)
 )
 
 ;; package: lsp-ivy
 (use-package lsp-ivy
+  :after lsp-mode
   :commands lsp-ivy-workspace-symbol)
 
 ;; package: company
 (use-package company
   :ensure t
+  :init
+  (add-hook 'after-init-hook 'global-company-mode)
   :config
   (company-tng-configure-default)
-  :init
-  (global-company-mode))
+  )
 
 ;; package: company-box
 (use-package company-box
@@ -76,9 +79,14 @@
 
 ;; package: flycheck
 (use-package flycheck
+  :init
+  (add-hook 'after-init-hook 'flycheck-mode)
   :ensure t)
 
 (use-package dap-mode
+  :init
+  :hook
+  (prog-mode . dap-mode)
   :ensure t)
 
 

@@ -11,6 +11,8 @@
 ;; package :ivy
 (use-package ivy
   :ensure t
+  :init
+  (add-hook 'after-init-hook 'ivy-mode)
   :bind (("C-s" . swiper)
          :map ivy-minibuffer-map
          ("C-l" . ivy-alt-done)

@@ -23,12 +23,13 @@
 ;; func to define my leader key map
 (general-create-definer my-leader-def
   :states '(normal insert visual emacs)
+  :keymaps 'override
   :prefix "SPC"
   :non-normal-prefix "C-,")
 
 (my-leader-def
  "b" '(:wk "Buffer")
- "bb" '(counsel-switch-buffer :wk "switch buffer")
+ "bb" '(counsel-switch-buffer :wk "switch-buffer")
  "bk" '(kill-this-buffer :wk "kill-this-buffer")
  "bn" '(next-buffer :wk "next-buffer")
  "bp" '(previous-buffer :wk "previous-buffer")
@@ -43,6 +44,7 @@
  "hr" '(restart-emacs :wk "restart-emacs")
 
  "l" '(:wk "Language")
+ "le" '(eval-buffer :wk "eval-buffer")
  "lf" '(format-all-buffer :wk "format-buffer")
 
 

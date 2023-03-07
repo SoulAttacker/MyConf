@@ -1,3 +1,8 @@
+(use-package python-mode
+  :ensure t
+  :config
+  (setq-default python-indent-offset 4))
+
 (use-package conda
   :ensure t
   :config

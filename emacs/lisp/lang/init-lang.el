@@ -10,6 +10,7 @@
 (require 'init-org)
 (require 'init-markdown)
 (require 'init-lsp)
+(require 'init-elisp)
 (require 'init-cc)
 (require 'init-python)
 

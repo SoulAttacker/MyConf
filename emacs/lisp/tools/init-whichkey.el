@@ -13,4 +13,9 @@
   :diminish which-key-mode
   :config (setq which-key-idle-delay 0.3))
 
+(use-package which-key-posframe
+  :ensure t
+  :config
+  (which-key-posframe-mode))
+
 (provide 'init-whichkey)

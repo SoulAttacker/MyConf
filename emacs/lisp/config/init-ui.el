@@ -40,19 +40,19 @@
   :ensure t
   :init
   (add-hook 'after-init-hook 'dashboard-refresh-buffer)
-  :config
-  (setq dashboard-startup-banner 'logo)
+  :init
+  (setq dashboard-startup-banner 'logo
+        dashboard-banner-logo-title "Welcome to SoulWalker's Emacs! Love ya~"
+        dashboard-center-content t
+        dashboard-show-shortcuts t
+        dashboard-set-file-icons t
+        dashboard-set-navigator t
+
+        dashboard-items '((recents . 10)
+                          (bookmarks . 5)
+                          (projects . 5))
+        )
   (dashboard-setup-startup-hook)
-
-  (setq dashboard-banner-logo-title "Welcome to SoulWalker's Emacs! Love ya~")
-
-  (setq dashboard-center-content t)
-
-  (setq dashboard-show-shortcuts nil)
-
-  (setq dashboard-set-file-icons t)
-
-  (setq dashboard-set-navigator t)
   )
 
 ;; package: centaur-tabs

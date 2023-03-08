@@ -17,6 +17,10 @@
 ;; disable scroll-bar
 (scroll-bar-mode -1)
 
+;; scroll mode
+(setq scroll-step 1
+      scroll-margin 0)
+
 ;; disable menu-bar
 (menu-bar-mode 1)
 
@@ -123,8 +127,8 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; confirm to exit emacs
-;; (add-hook 'kill-emacs-query-functions
-;;           (lambda () (y-or-n-p "Do you really want to exit Emacs? "))
-;;           'append)
+(add-hook 'kill-emacs-query-functions
+          (lambda () (y-or-n-p "Do you really want to exit Emacs? "))
+          'append)
 
 (provide 'init-basic)

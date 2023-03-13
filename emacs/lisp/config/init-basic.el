@@ -8,6 +8,8 @@
 
 ;;; Code:
 
+(require 'cl-macs)
+
 ;; disable startup
 (setq inhibit-startup-message t)
 
@@ -127,8 +129,10 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; confirm to exit emacs
-(add-hook 'kill-emacs-query-functions
-          (lambda () (y-or-n-p "Do you really want to exit Emacs? "))
-          'append)
+;; (add-hook 'kill-emacs-query-functions
+;;           (lambda () (y-or-n-p "Do you really want to exit Emacs? "))
+;;           'append)
+
+(setq auto-insert-mode t)
 
 (provide 'init-basic)

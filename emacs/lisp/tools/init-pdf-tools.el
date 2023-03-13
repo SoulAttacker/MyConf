@@ -1,6 +1,6 @@
 
 (use-package pdf-tools
-  :ensure t
+  :mode ("\\.[pP][dD][fF]\\'" . pdf-view-mode)
   :config
   (pdf-tools-install)
 )

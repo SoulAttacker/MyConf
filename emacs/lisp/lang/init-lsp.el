@@ -38,26 +38,26 @@
         lsp-modeline-diagnostics-enable t
         )
   (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
-)
+  )
 
 ;; package: lsp-ui
 (use-package lsp-ui
-    :after lsp-mode
-    :init
-    (setq lsp-ui-doc-include-signature t
-          lsp-ui-doc-enable t
-	      ; lsp-ui-doc-position 'at-point
-          lsp-ui-doc-show-with-cursor t
-          )
-    (add-hook 'lsp-mode-hook 'lsp-ui-mode)
-    (add-hook 'lsp-ui-mode-hook 'lsp-modeline-code-actions-mode))
+  :hook (lsp-mode . lsp-ui-mode)
+  :init
+  (setq lsp-ui-doc-include-signature t
+        lsp-ui-doc-enable t
+                                        ; lsp-ui-doc-position 'at-point
+        lsp-ui-doc-show-with-cursor t
+        )
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+  (add-hook 'lsp-ui-mode-hook 'lsp-modeline-code-actions-mode))
 
 ;; package: lsp-treemacs
 (use-package lsp-treemacs
   :after lsp-mode
   :config
   (lsp-treemacs-sync-mode 1)
-)
+  )
 
 ;; package: lsp-ivy
 (use-package lsp-ivy
@@ -73,15 +73,20 @@
   (company-tng-configure-default)
   )
 
+
 ;; package: company-box
 (use-package company-box
   :hook (company-mode . company-box-mode))
 
 ;; package: flycheck
-(use-package flycheck
-  :init
-  (add-hook 'after-init-hook 'flycheck-mode)
-  :ensure t)
+;; (use-package flycheck
+;;   :init
+;;   (add-hook 'after-init-hook 'flycheck-mode)
+;;   :ensure t)
+;; (use-package flymake
+;;   :ensure nil
+;;   :diminish (flymake " FlayMake.")
+;;   :hook (prog-mode . flymake-mode))
 
 (use-package dap-mode
   :init

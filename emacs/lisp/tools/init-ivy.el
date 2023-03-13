@@ -24,7 +24,8 @@
          ("C-k" . ivy-previous-line)
          ("C-d" . ivy-reverse-i-search-kill))
   :config
-  (ivy-mode nil))
+  (ivy-mode nil)
+  (setq ivy-count-format "(%d/%d) "))
 
 ;; package: counsel
 (use-package counsel
@@ -63,11 +64,12 @@
 (use-package ivy-posframe
   :after ivy
   :init
-  (ivy-posframe-mode 1)
   (setq ivy-height 15
-        ivy-posframe-border-width 3
+        ivy-posframe-border-width 8
         ivy-posframe-parameters '((left-fringe . 8)
-                                  (right-fringe . 8)))
+                                  (right-fringe . 8))
+        )
+  (ivy-posframe-mode 1)
   :config
   (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display))))
 

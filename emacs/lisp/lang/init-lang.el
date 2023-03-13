@@ -7,6 +7,7 @@
 
 ;;; Code:
 
+(require 'init-prog)
 (require 'init-org)
 (require 'init-markdown)
 (require 'init-lsp)

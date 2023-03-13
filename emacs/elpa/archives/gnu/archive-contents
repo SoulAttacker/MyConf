@@ -164,14 +164,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:commit . "53addd02fbad33765f508f8e6254ebd44e1f81e5"))])
  (auctex .
-	 [(13 1 9)
+	 [(13 1 10)
 	  ((emacs
 	    (25 1)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "6d4b412b6989763d717b70cb0fdab6b4d52fb1c0"))])
+	   (:commit . "658832b8a228f072e6a5a760e7d9fba1ae9808a6"))])
  (aumix-mode .
 	     [(7)
 	      nil "run the aumix program in a buffer" single
@@ -520,7 +520,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(29 1 3 4)
+	 [(29 1 4 0)
 	  ((emacs
 	    (24 4))
 	   (seq
@@ -531,19 +531,19 @@
 	   (:maintainer "Daniel Mendler <mail@daniel-mendler.de>, Compat Development" . "~pkal/compat-devel@lists.sr.ht")
 	   (:authors
 	    ("Philip Kaludercic <philipk@posteo.net>, Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "42cf6f29bcab1d390046299c09285db7be03932c"))])
+	   (:commit . "7a9c37f1b371b2c144b9d76e1f6333032d9f9179"))])
  (consult .
-	  [(0 32)
+	  [(0 33)
 	   ((emacs
 	     (27 1))
 	    (compat
-	     (29 1 3 2)))
+	     (29 1 4 0)))
 	   "Consulting completing-read" tar
 	   ((:url . "https://github.com/minad/consult")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler and Consult contributors"))
-	    (:commit . "0759dd12bb2290480644a7ec34118f67718074ad"))])
+	    (:commit . "fd00979d2fbfad66960c621e9fc140eb8c6a06f3"))])
  (consult-recoll .
 		 [(0 8)
 		  ((emacs
@@ -750,6 +750,18 @@
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "7c425a2d0988f3fae603434c1f8044be8293d517"))])
+ (denote-menu .
+	      [(1 0 0)
+	       ((emacs
+		 (28 1))
+		(denote
+		 (1 2 0)))
+	       "View denote files in a tabulated list." tar
+	       ((:maintainer "Mohamed Suliman" . "sulimanm@tcd.ie")
+		(:authors
+		 ("Mohamed Suliman" . "sulimanm@tcd.ie"))
+		(:url . "https://elpa.gnu.org/packages/denote-menu.html")
+		(:commit . "3bd7cf7d126d4493df17715aec3e7a9046efdc8c"))])
  (detached .
 	   [(0 10 1)
 	    ((emacs
@@ -1091,7 +1103,7 @@
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		   (:commit . "127492fac048cecfdba145d496a902022a68d1d5"))])
  (ement .
-	[(0 5 2)
+	[(0 7)
 	 ((emacs
 	   (27 1))
 	  (map
@@ -1112,7 +1124,7 @@
 	  (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	  (:authors
 	   ("Adam Porter" . "adam@alphapapa.net"))
-	  (:commit . "58ea59e80c5a68098c83413c49622aa0b08d7579"))])
+	  (:commit . "5bb6c930ff29f22263018b5dff7b45669b8357f5"))])
  (emms .
        [(14)
 	((cl-lib
@@ -1631,7 +1643,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/ilist.html"))])
  (inspector .
-	    [(0 20)
+	    [(0 27)
 	     ((emacs
 	       (27 1)))
 	     "Tool for inspection of Emacs Lisp objects" tar
@@ -1640,7 +1652,7 @@
 	      (:maintainer "Mariano Montone" . "marianomontone@gmail.com")
 	      (:authors
 	       ("Mariano Montone" . "marianomontone@gmail.com"))
-	      (:commit . "61fd1dc7e321525cca11a5a899c631f745b2cf31"))])
+	      (:commit . "d6f462d8eae8895deb01ecd649628a295791e6de"))])
  (ioccur .
 	 [(2 6)
 	  ((emacs
@@ -1766,6 +1778,19 @@
 		(:authors
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
+ (jit-spell .
+	    [(0 2)
+	     ((emacs
+	       (27 1))
+	      (compat
+	       (29 1)))
+	     "Just-in-time spell checking" tar
+	     ((:url . "https://github.com/astoff/jit-spell")
+	      (:keywords "tools" "wp")
+	      (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
+	      (:authors
+	       ("Augusto Stoffel" . "arstoffel@gmail.com"))
+	      (:commit . "c0340baa13ec381f88191bfa9f95d6f4199503fc"))])
  (js2-mode .
 	   [(20220710)
 	    ((emacs
@@ -2557,7 +2582,7 @@
 	    (:url . "https://elpa.gnu.org/packages/persist.html")
 	    (:commit . "25d675307c03f720e592c3dc9a5a0ae8db0836eb"))])
  (phps-mode .
-	    [(0 4 42)
+	    [(0 4 43)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2566,7 +2591,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "fddb7924536db7ba9c6bcdb747a3fa4ca3cbeb8d"))])
+	      (:commit . "73b7a64013c744dda5b865a228f9acc69033e7a0"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single
@@ -3694,17 +3719,17 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "2c2ecb46b0ad3e841ac9551e3a80d02893cdf6ec"))])
  (vertico .
-	  [(1 1)
+	  [(1 2)
 	   ((emacs
 	     (27 1))
 	    (compat
-	     (29 1 3 4)))
+	     (29 1 4 0)))
 	   "VERTical Interactive COmpletion" tar
 	   ((:url . "https://github.com/minad/vertico")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "01f0fc07d1831f00ebc64550867a0fa6eedb1fb7"))])
+	    (:commit . "3386763b717415840fd58929cc2ca056e0eb10d5"))])
  (vertico-posframe .
 		   [(0 7 2)
 		    ((emacs

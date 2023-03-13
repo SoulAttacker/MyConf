@@ -1,1 +1,1 @@
-("~/.config/centaur_emacs/")
+("~/CLionProjects/flower/")

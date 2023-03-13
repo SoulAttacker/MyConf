@@ -1,5 +1,5 @@
 (use-package python-mode
-  :ensure t
+  :mode ("\\.[pP][yY]\\'" . python-mode)
   :config
   (setq-default python-indent-offset 4))
 

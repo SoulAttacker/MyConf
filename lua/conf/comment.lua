@@ -1,5 +1,0 @@
--- 
--- comment
---
-require('Comment').setup()
-

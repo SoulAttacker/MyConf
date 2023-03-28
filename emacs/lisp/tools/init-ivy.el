@@ -65,7 +65,7 @@
   :after ivy
   :init
   (setq ivy-height 15
-        ivy-posframe-border-width 8
+        ivy-posframe-border-width 3
         ivy-posframe-parameters '((left-fringe . 8)
                                   (right-fringe . 8))
         )

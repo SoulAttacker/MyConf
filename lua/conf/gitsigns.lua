@@ -1,5 +1,0 @@
--- 
--- gitsigns
---
-require('gitsigns').setup()
-

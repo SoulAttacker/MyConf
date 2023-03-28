@@ -32,6 +32,7 @@
 (require 'init-pdf-tools)
 (require 'init-vterm)
 (require 'init-avy)
+(require 'init-highlight)
 
 ;; maybe should at tail
 (require 'init-general)

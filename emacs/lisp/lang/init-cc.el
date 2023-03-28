@@ -16,9 +16,10 @@
   :mode ("CMakeLists\\.txt'" . cmake-mode)
   :ensure t)
 
-;; package: cmake-ide
+(use-package rtags
+  :after cmake-mode)
+
 (use-package cmake-ide
-  :after c++-mode
   :config
   (cmake-ide-setup))
 

@@ -32,10 +32,16 @@
 ;;   ;; (kaolin-treemacs-theme))
 ;;   :ensure nil)
 
-(use-package solo-jazz-theme
-  :ensure nil)
+;; (use-package solo-jazz-theme
 ;;   :config
 ;;   (load-theme 'solo-jazz t))
+
+(use-package timu-spacegrey-theme
+  :ensure nil)
+
+;; (use-package nord-theme
+;;   :config
+;;   (load-theme 'nord t))
 
 (use-package doom-themes
   :ensure t
@@ -43,7 +49,7 @@
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  (load-theme 'doom-one-light t)
+  (load-theme 'doom-nord t)
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
@@ -76,7 +82,7 @@
   :ensure t
   :init
   (add-hook 'after-init-hook 'dashboard-refresh-buffer)
-  :init
+  :config
   (setq dashboard-startup-banner 'logo
         dashboard-banner-logo-title "Welcome to SoulWalker's Emacs! Love ya~"
         dashboard-center-content t
@@ -85,7 +91,6 @@
         dashboard-set-navigator t
 
         dashboard-items '((recents . 10)
-                          (bookmarks . 5)
                           (projects . 5))
         )
   (dashboard-setup-startup-hook)

@@ -37,5 +37,19 @@
   :hook (after-init-hook . global-treesit-auto-mode)
   :init (setq treesit-auto-install 'prompt))
 
+;; package: flycheck
+;; (use-package flycheck
+;;   :init
+;;   (add-hook 'after-init-hook 'flycheck-mode))
+
+(use-package flymake
+  :ensure nil
+  :diminish (flymake " FlayMake.")
+  :hook (prog-mode . flymake-mode))
+
+
+(use-package smart-tab
+  :hook (prog-mode . smart-tab-mode))
+
 (provide 'init-prog)
 ;;; init-prog.el ends here

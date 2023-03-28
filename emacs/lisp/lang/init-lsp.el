@@ -47,6 +47,7 @@
   (setq lsp-ui-doc-include-signature t
         lsp-ui-doc-enable t
                                         ; lsp-ui-doc-position 'at-point
+        lsp-ui-peek-always-show t
         lsp-ui-doc-show-with-cursor t
         )
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
@@ -67,26 +68,17 @@
 ;; package: company
 (use-package company
   :ensure t
-  :init
-  (add-hook 'after-init-hook 'global-company-mode)
+  :hook (prog-mode . company-mode)
   :config
   (company-tng-configure-default)
+  (setq company-minimum-prefix-length 1
+        company-transformers '(company-sort-by-occurrence))
   )
 
 
 ;; package: company-box
 (use-package company-box
   :hook (company-mode . company-box-mode))
-
-;; package: flycheck
-;; (use-package flycheck
-;;   :init
-;;   (add-hook 'after-init-hook 'flycheck-mode)
-;;   :ensure t)
-;; (use-package flymake
-;;   :ensure nil
-;;   :diminish (flymake " FlayMake.")
-;;   :hook (prog-mode . flymake-mode))
 
 (use-package dap-mode
   :init

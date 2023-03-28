@@ -8,6 +8,8 @@
 ;;; Code:
 
 (require 'init-prog)
+(require 'init-yasnippet)
+(require 'init-docstr)
 (require 'init-org)
 (require 'init-markdown)
 (require 'init-lsp)

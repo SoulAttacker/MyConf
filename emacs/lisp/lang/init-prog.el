@@ -42,6 +42,11 @@
 ;;   :init
 ;;   (add-hook 'after-init-hook 'flycheck-mode))
 
+(use-package elec-pair
+  :ensure nil
+  :hook (after-init . electric-pair-mode)
+  :init (setq electric-pair-inhibit-predicate 'electric-pair-conservative-inhibit))
+
 (use-package flymake
   :ensure nil
   :diminish (flymake " FlayMake.")

@@ -16,5 +16,6 @@
 (require 'init-elisp)
 (require 'init-cc)
 (require 'init-python)
+(require 'init-clojure)
 
 (provide 'init-lang)

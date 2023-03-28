@@ -29,7 +29,7 @@
   :mode ("\\.[cC][lL][jJ]\\'" . clojure-mode))
 
 (use-package cider
-  :ensure t
+  :hook (prog-mode . cider-mode)
   :config
   (setq nerpl-pop-statcktraces nil))
 

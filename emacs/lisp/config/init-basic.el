@@ -101,8 +101,8 @@
 (setup-fonts)
 
 
-;; pair complementation
-(electric-pair-mode 1)
+;; pair complementation, replace in prog-mode
+;; (electric-pair-mode 1)
 
 ;; pair highlight
 (show-paren-mode 1)

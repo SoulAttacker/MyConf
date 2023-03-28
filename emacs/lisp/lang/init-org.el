@@ -45,8 +45,11 @@
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((emacs-lisp . t)
+     (shell . t)
      (python . t)
      (clojure . t)))
+  (require 'init-clojure)
+  (setq org-babel-clojure-backend 'cider)
 
   ;; haven't to confirm y-or-n
   (setq org-confirm-babel-evaluate nil)
@@ -55,11 +58,26 @@
   (require 'org-tempo)
   (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
   (add-to-list 'org-structure-template-alist '("py" . "src python"))
-  (add-to-list 'org-structure-template-alist '("clj" . "src clojure"))
+  (add-to-list 'org-structure-template-alist '("clj" . "src clojure")))
 
 
+(use-package org-roam
+  :ensure t
+  :init
+  (setq org-roam-v2-ack t)
+  :custom
+  (org-roam-directory (file-truename "~/org-roam/"))
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n g" . org-roam-graph)
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n c" . org-roam-capture)
+         ;; Dailies
+         ("C-c n j" . org-roam-dailies-capture-today))
+  :config
+  (org-roam-setup)
+)
 
-  )
 
 
 (use-package toc-org

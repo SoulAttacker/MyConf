@@ -15,12 +15,4 @@
 (use-package cmake-mode
   :mode ("CMakeLists\\.txt'" . cmake-mode))
 
-(use-package rtags
-  :after cmake-mode)
-
-(use-package cmake-ide
-  :config
-  (cmake-ide-setup))
-
-
 (provide 'init-cc)

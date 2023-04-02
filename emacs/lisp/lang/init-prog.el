@@ -47,10 +47,10 @@
   :hook (after-init . electric-pair-mode)
   :init (setq electric-pair-inhibit-predicate 'electric-pair-conservative-inhibit))
 
-(use-package flymake
-  :ensure nil
-  :diminish (flymake " FlayMake.")
-  :hook (prog-mode . flymake-mode))
+;; (use-package flymake
+;;   :ensure nil
+;;   :diminish (flymake " FlayMake.")
+;;   :hook (prog-mode . flymake-mode))
 
 
 (use-package smart-tab

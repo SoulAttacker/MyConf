@@ -10,21 +10,12 @@
 
 ;; package: lsp-mode
 (use-package lsp-mode
+  :ensure t
   :commands (lsp lsp-deferred)
-  :init
-  (defun lsp-save-actions ()
-    (add-hook 'before-save-hook #'lsp-organize-imports t t)
-  :hook ((lsp-mode . #'lsp-enable-which-key-integration)
-         (lsp-mode . #'lsp-save-actions)
-         ((c-mode
-           c++-mode
-           go-mode
-           java-mode
-           js-mode
-           python-mode
-           rust-mode
-           web-mode
-           elisp-mode) . lsp-deferred))
+  :hook ((c-mode . lsp)
+         (c++-mode . lsp)
+         (python-mode . lsp)
+         (clojure-mode . lsp))
   :config
   (setq lsp-auto-guess-root t
 	    lsp-headerline-breadcrumb-enable nil
@@ -48,8 +39,11 @@
 
         ;; lsp-pylsp-plugins-flake8-enabled t
         ;; lsp-pylsp-plugins-flake8-max-line-length 300
+
+        ;; cpp clangd setup
+        lsp-clangd-binary-path "/usr/bin/clangd"
         )
-  (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)))
+  (define-key lsp-mode-map (kbd "C-c l") lsp-command-map))
 
 ;; package: lsp-ui
 (use-package lsp-ui

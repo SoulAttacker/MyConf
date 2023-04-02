@@ -123,9 +123,12 @@
   "wh" '(evil-window-split :wk "window-hsplit")
 
   "p" '(:wk "Project")
+  "pc" '(projectile-compile-project :wk "projectile-compile-project")
+  "pf" '(projectile-find-file :wk "projectile-find-file")
   "pp" '(open-my-configuration :wk "personal-config")
-  "ps" '(counsel-projectile-switch-project :wk "switch-project")
-  "pP" '(projectile-command-map :wk "projectile-command")
+  "pr" '(projectile-run-project :wk "projectile-run-project")
+  "ps" '(counsel-projectile-switch-project :wk "counsel-switch-project")
+  "pR" '(projectile-replace :wk "projectile-replace")
 
   "t" '(:wk "Terminal")
   "tt" '(vterm-other-window :wk "vterm-other-window")
@@ -134,7 +137,7 @@
   "T" '(lsp-ui-imenu :wk "lsp-ui-imenu")
 
   "v" '(evil-window-vsplit :wk "window-vsplit")
-  "s" '(evil-window-split :wk "window-vsplit")
+  "s" '(evil-window-split :wk "window-split")
 
   )
 

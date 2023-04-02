@@ -62,10 +62,13 @@
   "C-a" '(move-beginning-of-line :wk "move-begin")
   "C-e" '(move-end-of-line :wk "move-end")
 
+  ;; remap C-r
+  "C-r" '(undo-redo :wk "undo-redo")
+
   ;; command for macos
   "M-s" '(save-buffer :wk "save-file")
 
-  "g" '(:wk "goto")
+  "g" '(:wk "Goto")
   "gd" '(lsp-ui-peek-find-definitions :wk "peek-definition")
   "gh" '(lsp-ui-peek-find-references :wk "peek-references")
   "gi" '(lsp-ui-peek-find-implementation :wk "peek-implementation")

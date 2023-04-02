@@ -13,8 +13,7 @@
   :init (setq-default c-basic-offset 4))
 
 (use-package cmake-mode
-  :mode ("CMakeLists\\.txt'" . cmake-mode)
-  :ensure t)
+  :mode ("CMakeLists\\.txt'" . cmake-mode))
 
 (use-package rtags
   :after cmake-mode)

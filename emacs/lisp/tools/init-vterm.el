@@ -1,5 +1,5 @@
 (use-package vterm
-  :ensure t
+  :defer t
   :config
   (setq vterm-kill-buffer-on-exit t))
 

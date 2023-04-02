@@ -27,12 +27,12 @@
 (use-package prescient)
 
 (use-package company-prescient
-  :ensure t
+  :hook (after-init . company-prescient-mode)
   :config
   (company-prescient-mode))
 
 (use-package ivy-prescient
-  :ensure t
+  :hook (after-init . ivy-prescient-mode)
   :config
   (ivy-prescient-mode))
 

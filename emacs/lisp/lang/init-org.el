@@ -28,6 +28,10 @@
   :mode ("\\.[oO][rR][gG]\\'" . org-mode)
   :config
 
+  ;; code indent
+  (setq org-src-preserve-indentation nil
+        org-edit-src-content-indentation 0)
+
   ;; kind ui
   (use-package org-bullets
     :hook (org-mode . org-bullets-mode))
@@ -39,7 +43,8 @@
           org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
   (setq org-startup-with-inline-images t
-        org-hide-emphasis-markers t)
+        org-hide-emphasis-markers t
+        org-pretty-entities t)
 
   ;; set babel lang
   (org-babel-do-load-languages
@@ -59,6 +64,10 @@
   (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
   (add-to-list 'org-structure-template-alist '("py" . "src python"))
   (add-to-list 'org-structure-template-alist '("clj" . "src clojure")))
+
+;; (use-package org-modern
+;;   :hook (org-mode . org-modern-mode)
+;;   )
 
 
 (use-package org-roam

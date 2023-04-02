@@ -1,5 +1,6 @@
 (use-package projectile
   :diminish projectile-mode
+  :defer t
   :config
   (projectile-mode t)
   :custom

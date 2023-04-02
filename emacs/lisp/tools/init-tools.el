@@ -25,6 +25,7 @@
 ;;; Code:
 
 (require 'init-whichkey)
+(require 'init-magit)
 (require 'init-evil)
 (require 'init-treemacs)
 (require 'init-format-all)

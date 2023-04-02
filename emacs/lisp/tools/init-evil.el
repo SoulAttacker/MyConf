@@ -10,7 +10,7 @@
 
 ;; package: evil
 (use-package evil
-  :ensure t
+  :hook (after-init . evil-mode)
   :init
   (setq evil-want-keybinding nil)
   (setq evil-want-integration t)

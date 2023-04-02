@@ -108,9 +108,10 @@
   "l" '(:wk "Language")
   "la" '(lsp-execute-code-action :wk "code-action")
   "le" '(eval-buffer :wk "eval-buffer")
-  "lf" '(format-all-buffer :wk "format-all-buffer")
-  "lF" '(lsp-format-buffer :wk "lsp-format-buffer")
+  "lf" '(lsp-format-buffer :wk "lsp-format-buffer")
+  "lF" '(format-all-buffer :wk "format-all-buffer")
 
+  "m" '(magit :wk "magit")
 
   "w" '(:wk "Window")
   "wh" '(evil-window-left :wk "window-left")

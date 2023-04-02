@@ -1,1 +1,1 @@
-("~/project/clojure/tutorial/" "~/CLionProjects/lox/" "~/CLionProjects/lox/build/" "~/elisp/elisp/" "~/CLionProjects/flower/")
+("~/org/" "~/project/python/lox/" "/opt/homebrew/" "~/project/clojure/tutorial/" "~/CLionProjects/lox/" "~/CLionProjects/lox/build/" "~/elisp/elisp/" "~/CLionProjects/flower/")

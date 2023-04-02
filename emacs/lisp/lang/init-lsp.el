@@ -14,7 +14,6 @@
   :init
   (defun lsp-save-actions ()
     (add-hook 'before-save-hook #'lsp-organize-imports t t)
-	(add-hook 'before-save-hook #'lsp-format-buffer t t))
   :hook ((lsp-mode . #'lsp-enable-which-key-integration)
          (lsp-mode . #'lsp-save-actions)
          ((c-mode
@@ -36,9 +35,21 @@
         lsp-headerline-breadcrumb-icons-enable t
         lsp-signature-auto-activate t
         lsp-modeline-diagnostics-enable t
+
+
+        ;; python pylsp plugins setup
+        ;; pydocstyle == 6.1.1 so slow
+
+        lsp-pylsp-plugins-flake8-enabled nil
+        lsp-pylsp-plugins-autopep8-enabled t
+        lsp-pylsp-plugins-pydocstyle-enabled t
+        lsp-pylsp-plugins-pydocstyle-max-line-length 300
+        lsp-pylsp-plugins-pycodestyle-ignore '("E501" "E203" "E226" "E302" "E71")
+
+        ;; lsp-pylsp-plugins-flake8-enabled t
+        ;; lsp-pylsp-plugins-flake8-max-line-length 300
         )
-  (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
-  )
+  (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)))
 
 ;; package: lsp-ui
 (use-package lsp-ui
@@ -68,7 +79,8 @@
 ;; package: company
 (use-package company
   :ensure t
-  :hook (prog-mode . company-mode)
+  :init
+  (global-company-mode)
   :config
   (company-tng-configure-default)
   (setq company-minimum-prefix-length 1
@@ -80,11 +92,42 @@
 (use-package company-box
   :hook (company-mode . company-box-mode))
 
-(use-package dap-mode
-  :init
-  :hook
-  (prog-mode . dap-mode)
-  :ensure t)
+;; ;; package: corfu
+;; (use-package corfu
+;;   :custom
+;;   (corfu-cycle t)
+;;   (corfu-auto t)
+;;   (corfu-auto-prefix 1)
+;;   (corfu-preview-current t)
+;;   (corfu-auto-delay 0.0)
+;;   (corfu-echo-documentation 0.25)
+;;   (corfu-min-width 40)
+;;   (corfu-max-width 40)
+;;   :init
+;;   (global-corfu-mode)
+;;   (corfu-history-mode))
+;;
+;; (use-package orderless
+;;   :init
+;;   (setq completion-styles '(orderless basic)
+;;         completion-category-defaults nil
+;;         completion-category-overrides '((file (styles . (partial-completion))))))
+;;
+;; (use-package kind-icon
+;;   :ensure t
+;;   :after corfu
+;;   :custom
+;;   (kind-icon-default-face 'corfu-default) ; to compute blended backgrounds correctly
+;;   :config
+;;   (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
+;;
+;;
+;; (use-package dap-mode
+;;   :init
+;;   :hook
+;;   (prog-mode . dap-mode)
+;;   :ensure t)
+
 
 
 (provide 'init-lsp)

@@ -4,7 +4,7 @@
   (setq-default python-indent-offset 4))
 
 (use-package conda
-  :ensure t
+  :hook (after-init . conda-env-autoactivate-mode)
   :config
   (setq conda-anaconda-home "/Users/soulwalker/miniconda3"))
 

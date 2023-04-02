@@ -27,7 +27,6 @@
 (use-package dap-mode
   :custom
   (lsp-enable-dap-auto-configure nil)
-  :config
   :commands dap-debug
   :config
   (dap-ui-mode 1)

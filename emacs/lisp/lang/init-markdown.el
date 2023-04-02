@@ -1,5 +1,5 @@
 (use-package markdown-mode
-  :ensure t)
+  :mode ("\\.[mM][dD]\\'" . markdown-mode))
 
 
 ;; (use-package grip-mode

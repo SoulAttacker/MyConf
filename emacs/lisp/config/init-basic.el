@@ -10,26 +10,6 @@
 
 (require 'cl-macs)
 
-;; disable startup
-(setq inhibit-startup-message t)
-
-;; disable tool-bar
-(tool-bar-mode -1)
-
-;; disable scroll-bar
-(scroll-bar-mode -1)
-
-;; scroll mode
-(setq scroll-step 1
-      scroll-margin 0)
-
-;; disable menu-bar
-(menu-bar-mode 1)
-
-;; title bar
-(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
-(add-to-list 'default-frame-alist '(ns-appearance . dark))
-
 ;; show line number when in prog-mode
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 

@@ -1,3 +1,5 @@
 * Default
-** project
- - path :: ~/project
+** emacs
+ - path :: ~/.config/emacs
+** lox
+ - path :: ~/project/cpp/lox

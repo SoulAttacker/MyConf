@@ -10,7 +10,8 @@
 ;; package: cc-mode
 (use-package cc-mode
   :ensure t
-  :init (setq-default c-basic-offset 4))
+  :init (setq c-basic-offset 4))
+
 
 (use-package cmake-mode
   :mode ("CMakeLists\\.txt'" . cmake-mode))

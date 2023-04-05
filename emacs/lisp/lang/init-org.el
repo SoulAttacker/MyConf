@@ -28,6 +28,10 @@
   :mode ("\\.[oO][rR][gG]\\'" . org-mode)
   :config
 
+  ;; pretty
+  (require 'init-consts)
+  (add-hook 'org-mode-hook 'soulwalker-prettify-org-symbols-alist)
+
   ;; code indent
   (setq org-src-preserve-indentation nil
         org-edit-src-content-indentation 0)

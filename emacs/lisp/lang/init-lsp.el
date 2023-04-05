@@ -41,6 +41,7 @@
         ;; lsp-pylsp-plugins-flake8-max-line-length 300
 
         ;; cpp clangd setup
+        c-basic-offset 4
         lsp-clangd-binary-path "/usr/bin/clangd"
         )
   (define-key lsp-mode-map (kbd "C-c l") lsp-command-map))
@@ -51,9 +52,10 @@
   :init
   (setq lsp-ui-doc-include-signature t
         lsp-ui-doc-enable t
-                                        ; lsp-ui-doc-position 'at-point
         lsp-ui-peek-always-show t
         lsp-ui-doc-show-with-cursor t
+
+        lsp-ui-sideline-show-diagnostics t
         )
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
   (add-hook 'lsp-ui-mode-hook 'lsp-modeline-code-actions-mode))

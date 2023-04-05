@@ -12,10 +12,10 @@
 (require 'init-docstr)
 (require 'init-org)
 (require 'init-markdown)
-(require 'init-lsp)
 (require 'init-elisp)
 (require 'init-cc)
 (require 'init-python)
 (require 'init-clojure)
+(require 'init-lsp)
 
 (provide 'init-lang)

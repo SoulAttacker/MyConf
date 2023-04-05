@@ -12,8 +12,10 @@
 (use-package evil
   :hook (after-init . evil-mode)
   :init
-  (setq evil-want-keybinding nil)
-  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil
+        evil-want-integration t
+        evil-want-Y-yank-to-eol t
+        evil-want-fine-undo t)
   :config
   (evil-mode 1)
 
@@ -46,7 +48,9 @@
   ;; bind visual `line`-side motion with j/k
   (evil-global-set-key 'motion "j" 'evil-next-visual-line)
   (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
+
   )
+
 
 ;; package: evil-collection
 (use-package evil-collection

@@ -129,7 +129,7 @@
   "pc" '(projectile-compile-project :wk "projectile-compile-project")
   "pf" '(projectile-find-file :wk "projectile-find-file")
   "pp" '(open-my-configuration :wk "personal-config")
-  "pr" '(projectile-run-project :wk "projectile-run-project")
+  "pr" '(counsel-projectile-rg :wk "projectile-rg")
   "ps" '(counsel-projectile-switch-project :wk "counsel-switch-project")
   "pR" '(projectile-replace :wk "projectile-replace")
 

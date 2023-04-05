@@ -47,23 +47,6 @@
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 
-;; package: kaolin-themes
-;; (use-package kaolin-themes
-;;   ;; :config
-;;   ;; (load-theme 'kaolin-valley-light t)
-;;   ;; (kaolin-treemacs-theme))
-;;   :ensure nil)
-
-;; (use-package solo-jazz-theme
-;;   :config
-;;   (load-theme 'solo-jazz t))
-
-;; (use-package timu-spacegrey-theme
-;;   :ensure nil)
-
-;; (use-package nord-theme
-;;   :config
-;;   (load-theme 'nord t))
 
 ;; (use-package doom-themes
 ;;   :ensure t
@@ -151,7 +134,7 @@
 
 
 (use-package modus-themes
-  :ensure nil
+  :ensure t
   :init
   (setq modus-themes-italic-constructs t
         modus-themes-bold-constructs t
@@ -160,25 +143,35 @@
         modus-themes-tabs-accented t
         modus-themes-org-blocks 'gray-background)
 
-  ;; Make line numbers less intense
+  ;; common
+  (defconst modus-vivendi-palette-overrides
+    '(
+      ;; basic values
+      (bg-main          "#101010" "#ffffff")
+      ))
+
+
   (setq modus-themes-common-palette-overrides
+
+        ;; line number
         '((fg-line-number-inactive "gray50")
           (fg-line-number-active fg-main)
           (bg-line-number-inactive unspecified)
-          (bg-line-number-active unspecified)))
+          (bg-line-number-active unspecified)
+
+          ;; tab
+          (bg-tab-bar bg-main)
+          (bg-tab-current bg-main)
+          (bg-tab-other bg-main)))
 
   (load-theme 'modus-vivendi t))
 
-;; (use-package ef-themes
-;;   :config
-;;   (load-theme 'ef-dark t))
 
-;; (use-package dracula-theme
-;;   :config
-;;   (load-theme 'dracula t))
+(use-package awesome-tray
+  :load-path "awesome-tray"
 
-(require 'awesome-tray)
-(awesome-tray-mode 1)
+  :config
+  (awesome-tray-mode 1))
 
 
 (provide 'init-ui)

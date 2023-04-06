@@ -36,11 +36,11 @@
 (require 'init-highlight)
 (require 'init-auto-save)
 
-;; maybe should at tail
 (require 'init-general)
 (require 'init-ivy)
 (require 'init-prescient)
 ;; (require 'init-eaf)
+(require 'init-xenops)
 
 (provide 'init-tools)
 ;;; init-tools.el ends here

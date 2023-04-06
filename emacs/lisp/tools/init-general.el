@@ -79,6 +79,7 @@
 
 ;; leader key definition, prefix is "SPC" or "C-,"
 (my-leader-def
+  "SPC" '(counsel-M-x :wk "counsel-M-x")
   "a" '(:wk "Avy")
   "ac" '(avy-goto-char :wk "avy-goto-char")
   "aw" '(avy-goto-word-1 :wk "avy-goto-word")

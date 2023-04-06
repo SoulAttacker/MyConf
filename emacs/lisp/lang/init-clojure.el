@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
@@ -29,7 +29,7 @@
   :mode ("\\.[cC][lL][jJ]\\'" . clojure-mode))
 
 (use-package cider
-  :hook (prog-mode . cider-mode)
+  :hook (clojure-mode . cider-mode)
   :config
   (setq nerpl-pop-statcktraces nil))
 

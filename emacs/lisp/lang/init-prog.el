@@ -39,8 +39,7 @@
 
 ;; package: flycheck
 (use-package flycheck
-  :init
-  (add-hook 'after-init-hook 'flycheck-mode))
+  :hook (after-init . flycheck-mode))
 
 (use-package elec-pair
   :ensure nil

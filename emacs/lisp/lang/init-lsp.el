@@ -64,8 +64,7 @@
 (use-package lsp-treemacs
   :after lsp-mode
   :config
-  (lsp-treemacs-sync-mode 1)
-  )
+  (lsp-treemacs-sync-mode 1))
 
 ;; package: lsp-ivy
 (use-package lsp-ivy

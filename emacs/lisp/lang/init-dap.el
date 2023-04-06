@@ -25,6 +25,7 @@
 ;;; Code:
 
 (use-package dap-mode
+  :ensure nil
   :custom
   (lsp-enable-dap-auto-configure nil)
   :commands dap-debug

@@ -1,9 +1,9 @@
-;;; init-quickrun.el --- quickrun configuration      -*- lexical-binding: t; -*-
+;;; init-esup.el --- esup configuration              -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: quickrun
+;; Keywords: esup
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,20 +20,13 @@
 
 ;;; Commentary:
 
-;;
+;; 
 
 ;;; Code:
 
-(use-package quickrun
-  :hook after-init
-  :config
-  ;; Use this parameter as C++ default
-  (quickrun-add-command "python"
-    '((:command . "python")
-      (:mode    . python-mode)
-      (:exec    . ("%c %s"))
-      (:default "python"))))
 
+(use-package esup
+  :ensure t)
 
-(provide 'init-quickrun)
-;;; init-quickrun.el ends here
+(provide 'init-esup)
+;;; init-esup.el ends here

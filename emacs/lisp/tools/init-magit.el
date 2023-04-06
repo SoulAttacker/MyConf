@@ -20,12 +20,13 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
 (use-package magit
-  :defer t)
+  :defer t
+  :hook after-init)
 
 
 (provide 'init-magit)

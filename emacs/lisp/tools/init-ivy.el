@@ -10,7 +10,7 @@
 
 ;; package :ivy
 (use-package ivy
-  :ensure t
+  :hook (after-init . ivy-mode)
   :bind (("C-s" . swiper)
          :map ivy-minibuffer-map
          ("C-l" . ivy-alt-done)
@@ -46,7 +46,7 @@
 
 ;; package: all-the-icons-ivy-rich
 (use-package all-the-icons-ivy-rich
-  ;; :hook (ivy-mode . all-the-icons-ivy-rich-mode)
+  :hook (ivy-mode . all-the-icons-ivy-rich-mode)
   :init (all-the-icons-ivy-rich-mode 1)
   :config
   ;; Whether display the icons

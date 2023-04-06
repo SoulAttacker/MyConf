@@ -20,12 +20,13 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
 (use-package auto-save
   :load-path (lambda() (expand-file-name "site-lisp/auto-save" user-emacs-directory))
+  :hook after-init
   :config
   (auto-save-enable)
   (setq auto-save-silent t

@@ -26,7 +26,6 @@
 
 
 (use-package yasnippet
-  :diminish yas-minor-mode
   :hook (prog-mode . yas-global-mode))
 
 

@@ -103,7 +103,7 @@
 
 ;; package: centaur-tabs
 (use-package centaur-tabs
-  :ensure t
+  :hook (after-init . centaur-tabs-mode)
   :init
   (setq centaur-tabs-enable-key-bindings t)
   :config
@@ -169,6 +169,7 @@
 
 (use-package awesome-tray
   :load-path (lambda() (expand-file-name "site-lisp/awesome-tray" user-emacs-directory))
+  :hook (after-init . awesome-tray-mode)
   :config
   (awesome-tray-mode 1)
   (setq awesome-tray-active-modules '("location" "belong" "file-path" "mode-name" "last-command" "date"))

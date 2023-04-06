@@ -9,7 +9,7 @@
 
 ;; package: cc-mode
 (use-package cc-mode
-  :ensure t
+  :defer t
   :init (setq c-basic-offset 4))
 
 

@@ -1,0 +1,17 @@
+.cache
+.dap-breakpoints
+.lsp-session-v1
+auto-save-list
+cnfonts
+custom.el
+elpa
+eshell
+network-security.data
+org-roam.db
+projectile-bookmarks.eld
+projects
+recentf
+snippets
+tramp
+transient
+url

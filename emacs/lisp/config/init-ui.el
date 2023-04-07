@@ -107,6 +107,7 @@
   :init
   (setq centaur-tabs-enable-key-bindings t)
   :config
+  (centaur-tabs-enable-buffer-reordering)
   (setq centaur-tabs-style "rounded"
         centaur-tabs-height 16
         centaur-tabs-set-icons t
@@ -115,7 +116,8 @@
         centaur-tabs-show-new-tab-button nil
         centaur-tabs-plain-icons t
         x-underline-at-descent-line t
-        centaur-tabs-left-edge-margin nil)
+        centaur-tabs-left-edge-margin nil
+        centaur-tabs-adjust-buffer-order t)
 
   (centaur-tabs-change-fonts "CaskaydiaCove Nerd Font" 130)
   (centaur-tabs-mode t)
@@ -147,8 +149,7 @@
   (defconst modus-vivendi-palette-overrides
     '(
       ;; basic values
-      (bg-main          "#101010" "#ffffff")
-      ))
+      (bg-main          "#101010" "#ffffff")))
 
 
   (setq modus-themes-common-palette-overrides
@@ -168,13 +169,56 @@
 
 
 (use-package awesome-tray
-  :load-path (lambda() (expand-file-name "site-lisp/awesome-tray" user-emacs-directory))
+  :straight (awesome-tray
+             :type git :host github :repo "manateelazycat/awesome-tray")
   :hook (after-init . awesome-tray-mode)
   :config
   (awesome-tray-mode 1)
-  (setq awesome-tray-active-modules '("location" "belong" "file-path" "mode-name" "last-command" "date"))
-  )
+  (setq awesome-tray-active-modules '("location" "belong" "file-path" "mode-name" "last-command" "date")))
 
+(use-package composite
+  :ensure nil
+  :init (defvar composition-ligature-table (make-char-table nil))
+  :hook (((prog-mode
+           conf-mode nxml-mode markdown-mode help-mode
+           shell-mode eshell-mode term-mode vterm-mode)
+          . (lambda () (setq-local composition-function-table composition-ligature-table))))
+  :config
+  ;; support ligatures, some toned down to prevent hang
+  (let ((alist
+         '((33  . ".\\(?:\\(==\\|[!=]\\)[!=]?\\)")
+           (35  . ".\\(?:\\(###?\\|_(\\|[(:=?[_{]\\)[#(:=?[_{]?\\)")
+           (36  . ".\\(?:\\(>\\)>?\\)")
+           (37  . ".\\(?:\\(%\\)%?\\)")
+           (38  . ".\\(?:\\(&\\)&?\\)")
+           (42  . ".\\(?:\\(\\*\\*\\|[*>]\\)[*>]?\\)")
+           ;; (42 . ".\\(?:\\(\\*\\*\\|[*/>]\\).?\\)")
+           (43  . ".\\(?:\\([>]\\)>?\\)")
+           ;; (43 . ".\\(?:\\(\\+\\+\\|[+>]\\).?\\)")
+           (45  . ".\\(?:\\(-[->]\\|<<\\|>>\\|[-<>|~]\\)[-<>|~]?\\)")
+           ;; (46 . ".\\(?:\\(\\.[.<]\\|[-.=]\\)[-.<=]?\\)")
+           (46  . ".\\(?:\\(\\.<\\|[-=]\\)[-<=]?\\)")
+           (47  . ".\\(?:\\(//\\|==\\|[=>]\\)[/=>]?\\)")
+           ;; (47 . ".\\(?:\\(//\\|==\\|[*/=>]\\).?\\)")
+           (48  . ".\\(?:x[a-zA-Z]\\)")
+           (58  . ".\\(?:\\(::\\|[:<=>]\\)[:<=>]?\\)")
+           (59  . ".\\(?:\\(;\\);?\\)")
+           (60  . ".\\(?:\\(!--\\|\\$>\\|\\*>\\|\\+>\\|-[-<>|]\\|/>\\|<[-<=]\\|=[<>|]\\|==>?\\||>\\||||?\\|~[>~]\\|[$*+/:<=>|~-]\\)[$*+/:<=>|~-]?\\)")
+           (61  . ".\\(?:\\(!=\\|/=\\|:=\\|<<\\|=[=>]\\|>>\\|[=>]\\)[=<>]?\\)")
+           (62  . ".\\(?:\\(->\\|=>\\|>[-=>]\\|[-:=>]\\)[-:=>]?\\)")
+           (63  . ".\\(?:\\([.:=?]\\)[.:=?]?\\)")
+           (91  . ".\\(?:\\(|\\)[]|]?\\)")
+           ;; (92 . ".\\(?:\\([\\n]\\)[\\]?\\)")
+           (94  . ".\\(?:\\(=\\)=?\\)")
+           (95  . ".\\(?:\\(|_\\|[_]\\)_?\\)")
+           (119 . ".\\(?:\\(ww\\)w?\\)")
+           (123 . ".\\(?:\\(|\\)[|}]?\\)")
+           (124 . ".\\(?:\\(->\\|=>\\||[-=>]\\||||*>\\|[]=>|}-]\\).?\\)")
+           (126 . ".\\(?:\\(~>\\|[-=>@~]\\)[-=>@~]?\\)"))))
+    (dolist (char-regexp alist)
+      (set-char-table-range composition-ligature-table (car char-regexp)
+                            `([,(cdr char-regexp) 0 font-shape-gstring]))))
+  (set-char-table-parent composition-ligature-table composition-function-table))
 
 (provide 'init-ui)
 ;;; init-ui.el ends here

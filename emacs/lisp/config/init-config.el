@@ -8,8 +8,8 @@
 ;;; Code:
 
 (require 'init-basic)
-(require 'init-package)
 (require 'init-proxy)
+(require 'init-package)
 (require 'init-ui)
 
 (provide 'init-config)

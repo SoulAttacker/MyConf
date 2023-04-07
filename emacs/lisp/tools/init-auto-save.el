@@ -25,7 +25,8 @@
 ;;; Code:
 
 (use-package auto-save
-  :load-path (lambda() (expand-file-name "site-lisp/auto-save" user-emacs-directory))
+  :straight (auto-save
+             :type git :host github :repo "manateelazycat/auto-save")
   :hook after-init
   :config
   (auto-save-enable)

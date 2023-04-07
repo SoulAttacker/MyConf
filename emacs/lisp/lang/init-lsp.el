@@ -54,7 +54,7 @@
         lsp-ui-doc-enable t
         lsp-ui-peek-always-show t
         lsp-ui-doc-show-with-cursor t
-        lsp-ui-sideline-enable nil
+        lsp-ui-sideline-enable t
         lsp-ui-sideline-show-diagnostics nil
         )
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
@@ -71,22 +71,22 @@
   :after lsp-mode
   :commands lsp-ivy-workspace-symbol)
 
-(use-package sideline-flycheck
-  :hook (flycheck-mode . sideline-flycheck-setup))
-
-(use-package sideline-lsp
-  :hook (lsp-mode . sideline-lsp))
-
-(use-package sideline
-  :hook (prog-mode . sideline-mode)
-  :init
-  (setq sideline-order-left 'down              ; or 'up
-        sideline-order-right 'up               ; or 'down
-        sideline-format-left "%s   "           ; format for left aligment
-        sideline-format-right "   %s"          ; format for right aligment
-        sideline-priority 100                  ; overlays' priority
-        sideline-display-backend-name t
-        sideline-backends-right '(sideline-lsp sideline-flycheck)))
+;; (use-package sideline-flycheck
+;;   :hook (flycheck-mode . sideline-flycheck-setup))
+;; 
+;; (use-package sideline-lsp
+;;   :hook (lsp-mode . sideline-lsp))
+;; 
+;; (use-package sideline
+;;   :hook (prog-mode . sideline-mode)
+;;   :init
+;;   (setq sideline-order-left 'down              ; or 'up
+;;         sideline-order-right 'up               ; or 'down
+;;         sideline-format-left "%s   "           ; format for left aligment
+;;         sideline-format-right "   %s"          ; format for right aligment
+;;         sideline-priority 100                  ; overlays' priority
+;;         sideline-display-backend-name t
+;;         sideline-backends-right '(sideline-lsp sideline-flycheck)))
 
 ;; package: company
 (use-package company

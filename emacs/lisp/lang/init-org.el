@@ -44,7 +44,20 @@
     :hook (org-mode . org-superstar-mode)
     :config
     (setq org-superstar-remove-leading-stars t
-          org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
+          org-superstar-headline-bullets-list '("◉" ("🞛" ?◈) "○" "▷")
+          org-hiddien-keywords '(title))
+
+    (set-face-attribute 'org-level-8 nil :weight 'bold :inherit 'default)
+    ;; Low levels are unimportant => no scaling
+    (set-face-attribute 'org-level-7 nil :inherit 'org-level-8)
+    (set-face-attribute 'org-level-6 nil :inherit 'org-level-8)
+    (set-face-attribute 'org-level-5 nil :inherit 'org-level-8)
+    (set-face-attribute 'org-level-4 nil :inherit 'org-level-8)
+    ;; Top ones get scaled the same as in LaTeX (\large, \Large, \LARGE)
+    (set-face-attribute 'org-level-3 nil :inherit 'org-level-8 :height 1.2) ;\large
+    (set-face-attribute 'org-level-2 nil :inherit 'org-level-8 :height 1.44) ;\Large
+    (set-face-attribute 'org-level-1 nil :inherit 'org-level-8 :height 1.728) ;\LARGE
+    )
 
   (setq org-startup-with-inline-images t
         org-hide-emphasis-markers t
@@ -89,7 +102,7 @@
          ("C-c n j" . org-roam-dailies-capture-today))
   :config
   (org-roam-setup)
-)
+  )
 
 
 

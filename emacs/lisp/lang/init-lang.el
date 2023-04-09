@@ -16,6 +16,7 @@
 (require 'init-cc)
 (require 'init-python)
 (require 'init-clojure)
+(require 'init-go)
 (require 'init-lsp)
 
 (provide 'init-lang)

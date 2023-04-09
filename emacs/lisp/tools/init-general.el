@@ -89,7 +89,11 @@
   "bk" '(kill-this-buffer :wk "kill-this-buffer")
   "bn" '(next-buffer :wk "next-buffer")
   "bp" '(previous-buffer :wk "previous-buffer")
-  "bK" '(kill-buffer :wk "kill-buffer")
+
+  "bH" '(buf-move-left :wk "buffer-move-left")
+  "bJ" '(buf-move-down :wk "buffer-move-down")
+  "bK" '(buf-move-up :wk "buffer-move-up")
+  "bL" '(buf-move-right :wk "buffer-move-right")
 
   "c" '(:wk "Code")
   "cb" '(cmake-ide-run-cmake :wk "cmake-run-cmake")

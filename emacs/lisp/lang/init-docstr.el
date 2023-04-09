@@ -28,7 +28,8 @@
 (use-package docstr
   :hook (prog-mode . global-docstr-mode)
   :config
-  (setq docstr-python-style 'google))
+  (setq docstr-python-style 'google
+        docstr-go-style 'godoc))
 
 (provide 'init-docstr)
 ;;; init-docstr.el ends here

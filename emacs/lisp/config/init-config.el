@@ -10,6 +10,7 @@
 (require 'init-basic)
 (require 'init-proxy)
 (require 'init-package)
+(require 'init-path)
 (require 'init-ui)
 
 (provide 'init-config)

@@ -5,8 +5,8 @@
 ;; LSP Code.
 ;;
 
-
 ;;; configuration:
+
 
 ;; package: lsp-mode
 (use-package lsp-mode
@@ -15,7 +15,8 @@
   :hook ((c-mode . lsp)
          (c++-mode . lsp)
          (python-mode . lsp)
-         (clojure-mode . lsp))
+         (clojure-mode . lsp)
+         (go-mode . lsp))
   :config
   (setq lsp-auto-guess-root t
 	    lsp-headerline-breadcrumb-enable nil
@@ -73,10 +74,10 @@
 
 ;; (use-package sideline-flycheck
 ;;   :hook (flycheck-mode . sideline-flycheck-setup))
-;; 
+;;
 ;; (use-package sideline-lsp
 ;;   :hook (lsp-mode . sideline-lsp))
-;; 
+;;
 ;; (use-package sideline
 ;;   :hook (prog-mode . sideline-mode)
 ;;   :init
@@ -88,43 +89,65 @@
 ;;         sideline-display-backend-name t
 ;;         sideline-backends-right '(sideline-lsp sideline-flycheck)))
 
-;; package: company
-(use-package company
-  :ensure t
-  :init
-  (global-company-mode)
-  :config
-  (company-tng-configure-default)
-  (setq company-minimum-prefix-length 1
-        company-transformers '(company-sort-by-occurrence))
-  )
 
+;; package: company
+;; (use-package company
+;;   :ensure t
+;;   :config
+;;   (company-tng-mode)
+;;   (global-company-mode)
+;;   (company-tng-configure-default)
+;;   (setq company-minimum-prefix-length 1
+;;         company-transformers '(company-sort-by-occurrence))
+;;   )
+
+
+(use-package company
+  :straight (company
+             :type git :host github :repo "company-mode/company-mode" :commit "d359c920977e50d60aa255ec5d719dd38181ef17")
+  :hook (after-init . global-company-mode)
+  :config
+  (company-tng-mode)
+  (setq company-minimum-prefix-length 1
+        company-transformers '(company-sort-by-occurrence)))
 
 ;; package: company-box
 (use-package company-box
   :hook (company-mode . company-box-mode))
 
-;; ;; package: corfu
+;; package: corfu
+
 ;; (use-package corfu
+;;   :hook (after-init . global-corfu-mode)
+;;   ;; TAB-and-Go customizations
 ;;   :custom
-;;   (corfu-cycle t)
+;;   (corfu-cycle t)           ;; Enable cycling for `corfu-next/previous'
 ;;   (corfu-auto t)
+;;   (corfu-preselect 'prompt) ;; Always preselect the prompt
+;;   (corfu-preview-current 'insert)
 ;;   (corfu-auto-prefix 1)
 ;;   (corfu-preview-current t)
 ;;   (corfu-auto-delay 0.0)
 ;;   (corfu-echo-documentation 0.25)
-;;   (corfu-min-width 40)
-;;   (corfu-max-width 40)
-;;   :init
-;;   (global-corfu-mode)
-;;   (corfu-history-mode))
 ;;
+;;   ;; Use TAB for cycling, default is `corfu-complete'.
+;;   :bind
+;;   (:map corfu-map
+;;         ("TAB" . corfu-next)
+;;         ([tab] . corfu-next)
+;;         ("S-TAB" . corfu-previous)
+;;         ([backtab] . corfu-previous))
+;;
+;;   :init
+;;   (global-corfu-mode))
+
 ;; (use-package orderless
+;;   :after corfu
 ;;   :init
 ;;   (setq completion-styles '(orderless basic)
 ;;         completion-category-defaults nil
 ;;         completion-category-overrides '((file (styles . (partial-completion))))))
-;;
+
 ;; (use-package kind-icon
 ;;   :ensure t
 ;;   :after corfu
@@ -139,7 +162,6 @@
 ;;   :hook
 ;;   (prog-mode . dap-mode)
 ;;   :ensure t)
-
 
 
 (provide 'init-lsp)

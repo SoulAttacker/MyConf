@@ -1,9 +1,9 @@
-;;; init-tools.el --- tools module                   -*- lexical-binding: t; -*-
+;;; init-go.el --- golang configuration              -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
-;; Author: soulwalker
-;; Keywords: whichkey, evil, treemacs, format-all, projectile, pdf-tools, vterm, general, ivy
+;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
+;; Keywords: go
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,28 +20,13 @@
 
 ;;; Commentary:
 
-;; tools module.
+;;
 
 ;;; Code:
 
-(require 'init-whichkey)
-(require 'init-magit)
-(require 'init-evil)
-(require 'init-treemacs)
-(require 'init-format-all)
-(require 'init-projectile)
-(require 'init-pdf-tools)
-(require 'init-vterm)
-(require 'init-avy)
-(require 'init-highlight)
-(require 'init-auto-save)
-(require 'init-buffer-move)
+(use-package go-mode
+  :mode "\\.go\\'")
 
-(require 'init-general)
-(require 'init-ivy)
-(require 'init-prescient)
-;; (require 'init-eaf)
-(require 'init-xenops)
 
-(provide 'init-tools)
-;;; init-tools.el ends here
+(provide 'init-go)
+;;; init-go.el ends here

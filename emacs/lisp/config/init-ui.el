@@ -68,6 +68,7 @@
 
 ;; package: all-the-icons
 (use-package all-the-icons
+  :ensure t
   :if (display-graphic-p))
 
 ;; ;; package: doom-modeline
@@ -129,6 +130,7 @@
 
 ;; package: highlight-indent-guide
 (use-package highlight-indent-guides
+  :ensure t
   :hook ((prog-mode . highlight-indent-guides-mode))
   :init
   (setq highlight-indent-guides-method 'character

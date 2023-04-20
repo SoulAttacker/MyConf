@@ -24,6 +24,9 @@
 
 ;;; Code:
 
+(use-package rainbow-mode
+  :hook (emacs-lisp-mode . rainbow-mode))
+
 (provide 'init-elisp)
 ;;; init-elisp.el ends here
 

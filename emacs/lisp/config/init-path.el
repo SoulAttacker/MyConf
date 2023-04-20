@@ -34,13 +34,17 @@
 
 
 ;; env path
+(defconst my-env-dir (concat user-emacs-directory ".local"))
 (defconst my-env-file (concat user-emacs-directory ".local/env" ))
 
 ;; `printenv > ~/.config/emacs/.local/env`
 (defconst make-env-file (concat "printenv > " my-env-file))
 
-(if (file-exists-p my-env-file) nil
-    (shell-command make-env-file))
+(unless (file-exists-p my-env-dir)
+  (make-directory my-env-dir))
+
+(unless (file-exists-p my-env-file)
+  (shell-command make-env-file))
 
 (defun my-load-envvars-file (file &optional noerror)
   "Read and set envvars from FILE.
@@ -81,6 +85,7 @@ unreadable. Returns the names of envvars that were changed."
                (daemonp))
            (file-exists-p my-env-file))
   (my-load-envvars-file my-env-file))
+
 
 (provide 'init-path)
 ;;; init-path.el ends here

@@ -43,5 +43,7 @@
 ;; (require 'init-eaf)
 (require 'init-xenops)
 
+(require 'init-esup)
+
 (provide 'init-tools)
 ;;; init-tools.el ends here

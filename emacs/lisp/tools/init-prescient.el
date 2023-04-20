@@ -26,10 +26,10 @@
 
 (use-package prescient)
 
-(use-package company-prescient
-  :hook (after-init . company-prescient-mode)
-  :config
-  (company-prescient-mode))
+;; (use-package company-prescient
+;;   :hook (after-init . company-prescient-mode)
+;;   :config
+;;   (company-prescient-mode))
 
 (use-package ivy-prescient
   :hook (after-init . ivy-prescient-mode)

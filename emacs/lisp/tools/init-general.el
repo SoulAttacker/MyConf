@@ -130,6 +130,8 @@
   "wv" '(evil-window-vsplit :wk "window-vsplit")
   "wh" '(evil-window-split :wk "window-hsplit")
 
+  "wt" '(transwin-toggle :wk "transwin-toggle")
+
   "p" '(:wk "Project")
   "pc" '(projectile-compile-project :wk "projectile-compile-project")
   "pf" '(projectile-find-file :wk "projectile-find-file")

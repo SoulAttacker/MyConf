@@ -19,12 +19,11 @@
          (go-mode . lsp))
   :config
   (setq lsp-auto-guess-root t
-	    lsp-headerline-breadcrumb-enable nil
 	    lsp-keymap-prefix "C-c l"
 	    lsp-log-io nil
-        lsp-headerline-breadcrumb-enable t
         lsp-headerline-breadcrumb-segments '(project file symbols)
-        lsp-headerline-breadcrumb-icons-enable t
+	    lsp-headerline-breadcrumb-enable nil
+        lsp-headerline-breadcrumb-icons-enable nil
         lsp-signature-auto-activate t
         lsp-modeline-diagnostics-enable t
 

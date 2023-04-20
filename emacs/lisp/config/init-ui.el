@@ -47,41 +47,13 @@
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 
-
-;; (use-package doom-themes
-;;   :ensure t
-;;   :config
-;;   ;; Global settings (defaults)
-;;   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-;;         doom-themes-enable-italic t) ; if nil, italics is universally disabled
-;;   (load-theme 'doom-nord t)
-;;
-;;   ;; Enable flashing mode-line on errors
-;;   (doom-themes-visual-bell-config)
-;;   ;; Enable custom neotree theme (all-the-icons must be installed!)
-;;   (doom-themes-neotree-config)
-;;   ;; or for treemacs users
-;;   (setq doom-themes-treemacs-theme "doom-atom") ; use "doom-colors" for less minimal icon theme
-;;   (doom-themes-treemacs-config)
-;;   ;; Corrects (and improves) org-mode's native fontification.
-;;   (doom-themes-org-config))
+;; (setq custom-theme-directory (concat user-emacs-directory "lisp/themes/soulwalker-theme"))
+;; (add-to-list load-path (concat user-emacs-directory "soulwalker-dark-theme.el"))
 
 ;; package: all-the-icons
 (use-package all-the-icons
   :ensure t
   :if (display-graphic-p))
-
-;; ;; package: doom-modeline
-;; (use-package doom-modeline
-;;   :ensure t
-;;   :hook (after-init . doom-modeline-mode)
-;;   :config
-;;   (setq doom-modeline-height 1) ; optional
-;;   (custom-set-faces
-;;    '(mode-line ((t (:family "CaskaydiaCove Nerd Font" :height 0.9))))
-;;    '(mode-line-active ((t (:family "CaskaydiaCove Nerd Font" :height 0.9)))) ; For 29+
-;;    '(mode-line-inactive ((t (:family "CaskaydiaCove Nerd Font" :height 0.9)))))
-;;   )
 
 ;; package: dashboard
 (use-package dashboard
@@ -118,7 +90,7 @@
         centaur-tabs-plain-icons t
         x-underline-at-descent-line t
         centaur-tabs-left-edge-margin nil
-        centaur-tabs-adjust-buffer-order t)
+        centaur-tabs-adjust-buffer-order 'left)
 
   (centaur-tabs-change-fonts "CaskaydiaCove Nerd Font" 130)
   (centaur-tabs-mode t)
@@ -136,6 +108,11 @@
   (setq highlight-indent-guides-method 'character
         highlight-indent-guides-reponsive 'top))
 
+(use-package myron-themes
+  :straight (myron-themes :host github :repo "neeasade/myron-themes"))
+
+;; (use-package oxocarbon-emacs
+;;   :straight (oxocarbon-emacs :host github :repo "konrad1977/oxocarbon-emacs"))
 
 (use-package modus-themes
   :ensure t
@@ -151,8 +128,7 @@
   (defconst modus-vivendi-palette-overrides
     '(
       ;; basic values
-      (bg-main          "#101010" "#ffffff")))
-
+      (bg-main       "#101010")))
 
   (setq modus-themes-common-palette-overrides
 
@@ -167,8 +143,16 @@
           (bg-tab-current bg-main)
           (bg-tab-other bg-main)))
 
-  (load-theme 'modus-vivendi t))
+  (setq global-hl-line-mode t))
+;; (load-theme 'modus-vivendi t))
 
+(add-to-list 'custom-theme-load-path (concat user-emacs-directory "lisp/themes"))
+(load-theme 'soulwalker-dark t)
+
+
+;; (use-package naga-theme)
+;;   :config
+;;     (load-theme 'naga t))
 
 (use-package awesome-tray
   :straight (awesome-tray
@@ -176,7 +160,14 @@
   :hook (after-init . awesome-tray-mode)
   :config
   (awesome-tray-mode 1)
-  (setq awesome-tray-active-modules '("location" "belong" "file-path" "mode-name" "last-command" "date")))
+  ;; (setq awesome-tray-active-modules '("evil" "location" "belong" "file-path" "mode-name" "date" "Code is Art!"))
+  (defun slogon-info ()
+    "Code is Art!")
+  (add-to-list 'awesome-tray-module-alist
+               '("slogon" . (slogon-info awesome-tray-pink-face)))
+  (setq awesome-tray-active-modules '("location" "belong" "file-path" "mode-name" "date" "slogon"))
+  )
+
 
 (use-package composite
   :ensure nil
@@ -221,6 +212,7 @@
       (set-char-table-range composition-ligature-table (car char-regexp)
                             `([,(cdr char-regexp) 0 font-shape-gstring]))))
   (set-char-table-parent composition-ligature-table composition-function-table))
+
 
 (provide 'init-ui)
 ;;; init-ui.el ends here

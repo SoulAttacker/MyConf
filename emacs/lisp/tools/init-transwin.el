@@ -1,9 +1,9 @@
-;;; init-quickrun.el --- quickrun configuration      -*- lexical-binding: t; -*-
+;;; init-transwin.el --- transwin configuration      -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: quickrun
+;; Keywords: transwin
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,19 +20,12 @@
 
 ;;; Commentary:
 
-;;
+;; 
 
 ;;; Code:
 
-(use-package quickrun
-  :hook after-init
-  :config
-  (quickrun-add-command "python"
-    '((:command . "python")
-      (:mode    . python-mode)
-      (:exec    . ("%c %s"))
-      (:default "python"))))
+(use-package transwin)
 
 
-(provide 'init-quickrun)
-;;; init-quickrun.el ends here
+(provide 'init-transwin)
+;;; init-transwin.el ends here

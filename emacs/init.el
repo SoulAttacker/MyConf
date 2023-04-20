@@ -20,8 +20,8 @@
 ;; setup custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 
+(add-subdirs-to-load-path (expand-file-name (concat user-emacs-directory "site-lisp")))
 (add-subdirs-to-load-path (expand-file-name (concat user-emacs-directory "lisp")))
-;; (add-subdirs-to-load-path (expand-file-name (concat user-emacs-directory "site-lisp")))
 
 ;; configuration start
 (require 'init-config)

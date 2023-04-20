@@ -51,6 +51,8 @@
 ;;   :diminish (flymake " FlayMake.")
 ;;   :hook (prog-mode . flymake-mode))
 
+(use-package rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package smart-tab
   :hook (prog-mode . smart-tab-mode))

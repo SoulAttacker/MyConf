@@ -13,6 +13,13 @@
 ;; show line number when in prog-mode
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
+;; Set UTF-8 as the default coding system
+(when (fboundp 'set-charset-priority)
+  (set-charset-priority 'unicode))
+(prefer-coding-system 'utf-8)
+(setq locale-coding-system 'utf-8)
+(setq system-time-locale "C")
+(set-selection-coding-system 'utf-8)
 
 ;; backup
 ;; disable file backup & auto save
@@ -38,7 +45,7 @@
     ;; Set default font
     (cl-loop for font in '("CaskaydiaCove Nerd Font" "PT Mono" "Fira Code" "Jetbrains Mono"
                            "SF Mono" "Hack" "Source Code Pro" "Menlo"
-                           "Monaco" "DejaVu Sans Mono")
+                           "Monaco" "DejaVu Sans Mono" "CozetteVector")
              when (font-installed-p font)
              return (set-face-attribute 'default nil
                                         :family font

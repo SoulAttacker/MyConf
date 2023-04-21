@@ -61,7 +61,7 @@
   :init
   (add-hook 'after-init-hook 'dashboard-refresh-buffer)
   :config
-  (setq dashboard-startup-banner 'logo
+  (setq dashboard-startup-banner (concat user-emacs-directory "etc/logo_scale.png")
         dashboard-banner-logo-title "Welcome to SoulWalker's Emacs! Love ya~"
         dashboard-center-content t
         dashboard-show-shortcuts t

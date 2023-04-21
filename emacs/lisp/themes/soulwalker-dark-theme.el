@@ -85,10 +85,11 @@ determine the exact padding."
 
    (grey       base4)
    (red        '("#d02b61" "#d02b61" "red"))
-   (orange     '("#da8844" "#dd8411" "brightred"))
+   (orange     '("#fd673a" "#dd8411" "brightred"))
    (green      '("#00DD00" "#60aa00" "green"))
    (teal       '("#4db5bd" "#44b9b1" "brightgreen"))
-   (yellow     '("#ecbe7b" "#d08928" "yellow"))
+   ;; (yellow     '("#ecbe7b" "#d08928" "yellow"))
+   (yellow     '("#f9e076" "#d08928" "yellow"))
    (light-blue '("#4adede" "#4adede" "blue"))
    (blue       '("#6c9ef8" "#6c9ef8" "brightblue"))
    (dark-blue  '("#6688aa" "#6688aa" "blue"))
@@ -97,7 +98,6 @@ determine the exact padding."
    (cyan       '("#00aa80" "#00aa80" "brightcyan"))
    (dark-cyan  '("#5699AF" "#5699AF" "cyan"))
    (urlblue    '("#57aadd" "#57aadd" "blue"))
-
 
    ;; face categories -- required for all themes
    (highlight      green)
@@ -154,6 +154,9 @@ determine the exact padding."
    (lazy-highlight :background fg :foreground bg :weight 'bold)
    ((line-number &override) :foreground base4)
    ((line-number-current-line &override) :foreground fg :background bg)
+
+   ;; lsp
+
    (mode-line
     :background modeline-bg :foreground modeline-fg
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg)))
@@ -161,7 +164,7 @@ determine the exact padding."
     :background modeline-bg-inactive :foreground modeline-fg-alt
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive)))
    (mode-line-emphasis :foreground (if -modeline-bright base8 highlight))
-   ((tooltip &override) :background grey)
+   ((tooltip &override) :background base0)
 
    ;;;; border
    (ivy-posframe-border :background light-blue :foreground grey)

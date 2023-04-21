@@ -25,7 +25,6 @@
 ;;; Code:
 
 
-
 (require 'cl-lib)
 
 (defvar soulwalker-themes-base-faces
@@ -80,7 +79,8 @@
     (header-line :inherit 'mode-line)
     (header-line-highlight :inherit 'mode-line-highlight)
     ;;;; tab-line/tab-bar (Emacs 27+)
-    (tab-line :background bg-alt :foreground bg-alt)
+    ;; (tab-line :background bg-alt :foreground bg-alt)
+    (tab-line :background base0 :foreground base0)
     (tab-line-tab :background bg :foreground fg)
     (tab-line-tab-inactive :inherit 'tab-line-tab :background bg-alt :foreground fg-alt)
     (tab-line-tab-inactive-alternate :inherit 'tab-line-tab-inactive)
@@ -606,7 +606,8 @@
     ;;;; hl-fill-column-face
     (hl-fill-column-face :inherit '(hl-line shadow))
     ;;;; hl-line (built-in)
-    (hl-line :background bg-alt :extend t)
+    ;; (hl-line :background bg-alt :extend t)
+    (hl-line :background base0 :extend t)
     ;;;; hl-todo
     (hl-todo :foreground red :weight 'bold)
     ;;;; hlinum
@@ -660,7 +661,7 @@
     (ivy-virtual :inherit 'italic :foreground doc-comments)
     (ivy-modified-buffer :inherit 'bold :foreground warning)
     ;;;; ivy-posframe
-    (ivy-posframe :background (soulwalker-darken bg-alt 0.2))
+    (ivy-posframe :background bg)
     (ivy-posframe-border :inherit internal-border)
     ;;;; selectrum
     (selectrum-current-candidate :background region :extend t)

@@ -106,6 +106,7 @@
   :hook ((prog-mode . highlight-indent-guides-mode))
   :init
   (setq highlight-indent-guides-method 'character
+        highlight-indent-guides-auto-character-face-perc 200
         highlight-indent-guides-reponsive 'top))
 
 (use-package myron-themes
@@ -162,7 +163,7 @@
   (awesome-tray-mode 1)
   ;; (setq awesome-tray-active-modules '("evil" "location" "belong" "file-path" "mode-name" "date" "Code is Art!"))
   (defun slogon-info ()
-    "Code is Art!")
+    "Code is ART!")
   (add-to-list 'awesome-tray-module-alist
                '("slogon" . (slogon-info awesome-tray-pink-face)))
   (setq awesome-tray-active-modules '("location" "belong" "file-path" "mode-name" "date" "slogon"))

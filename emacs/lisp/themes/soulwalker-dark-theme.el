@@ -182,6 +182,7 @@ determine the exact padding."
    ((hes-escape-sequence-face &override) :inherit 'normal :foreground red)
    ;;;; highlight-numbers
    (highlight-numbers-number :foreground numbers)
+
    ;;;; ivy
    (ivy-current-match :background base4 :distant-foreground base0 :weight 'normal)
    ;;;; js2-mode
@@ -225,9 +226,11 @@ determine the exact padding."
    ;;;; swiper
    (swiper-background-match-face-1 :background grey)
    
+   ;;;; highlight-indent-guide
+   (highlight-indent-guides-character-face :foreground grey)
+
    ;;;; whitespace <built-in>
    ((whitespace-tab &override) :background bg))
-
   ;;;; Base theme variable overrides-
   ;; ()
   )

@@ -52,7 +52,6 @@
 
 ;; package: all-the-icons
 (use-package all-the-icons
-  :ensure t
   :if (display-graphic-p))
 
 ;; package: dashboard
@@ -106,7 +105,7 @@
   :hook ((prog-mode . highlight-indent-guides-mode))
   :init
   (setq highlight-indent-guides-method 'character
-        highlight-indent-guides-auto-character-face-perc 200
+        highlight-indent-guides-auto-character-face-perc 300
         highlight-indent-guides-reponsive 'top))
 
 (use-package myron-themes
@@ -115,36 +114,36 @@
 ;; (use-package oxocarbon-emacs
 ;;   :straight (oxocarbon-emacs :host github :repo "konrad1977/oxocarbon-emacs"))
 
-(use-package modus-themes
-  :ensure t
-  :init
-  (setq modus-themes-italic-constructs t
-        modus-themes-bold-constructs t
-        modus-themes-variable-pitch-ui t
-        modus-themes-mixed-fonts t
-        modus-themes-tabs-accented t
-        modus-themes-org-blocks 'gray-background)
-
-  ;; common
-  (defconst modus-vivendi-palette-overrides
-    '(
-      ;; basic values
-      (bg-main       "#101010")))
-
-  (setq modus-themes-common-palette-overrides
-
-        ;; line number
-        '((fg-line-number-inactive "gray50")
-          (fg-line-number-active fg-main)
-          (bg-line-number-inactive unspecified)
-          (bg-line-number-active unspecified)
-
-          ;; tab
-          (bg-tab-bar bg-main)
-          (bg-tab-current bg-main)
-          (bg-tab-other bg-main)))
-
-  (setq global-hl-line-mode t))
+;; (use-package modus-themes
+;;   :ensure t
+;;   :init
+;;   (setq modus-themes-italic-constructs t
+;;         modus-themes-bold-constructs t
+;;         modus-themes-variable-pitch-ui t
+;;         modus-themes-mixed-fonts t
+;;         modus-themes-tabs-accented t
+;;         modus-themes-org-blocks 'gray-background)
+;; 
+;;   ;; common
+;;   (defconst modus-vivendi-palette-overrides
+;;     '(
+;;       ;; basic values
+;;       (bg-main       "#101010")))
+;; 
+;;   (setq modus-themes-common-palette-overrides
+;; 
+;;         ;; line number
+;;         '((fg-line-number-inactive "gray50")
+;;           (fg-line-number-active fg-main)
+;;           (bg-line-number-inactive unspecified)
+;;           (bg-line-number-active unspecified)
+;; 
+;;           ;; tab
+;;           (bg-tab-bar bg-main)
+;;           (bg-tab-current bg-main)
+;;           (bg-tab-other bg-main)))
+;; 
+;;   (setq global-hl-line-mode t)
 ;; (load-theme 'modus-vivendi t))
 
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "lisp/themes"))
@@ -170,49 +169,49 @@
   )
 
 
-(use-package composite
-  :ensure nil
-  :init (defvar composition-ligature-table (make-char-table nil))
-  :hook (((prog-mode
-           conf-mode nxml-mode markdown-mode help-mode
-           shell-mode eshell-mode term-mode vterm-mode)
-          . (lambda () (setq-local composition-function-table composition-ligature-table))))
-  :config
-  ;; support ligatures, some toned down to prevent hang
-  (let ((alist
-         '((33  . ".\\(?:\\(==\\|[!=]\\)[!=]?\\)")
-           (35  . ".\\(?:\\(###?\\|_(\\|[(:=?[_{]\\)[#(:=?[_{]?\\)")
-           (36  . ".\\(?:\\(>\\)>?\\)")
-           (37  . ".\\(?:\\(%\\)%?\\)")
-           (38  . ".\\(?:\\(&\\)&?\\)")
-           (42  . ".\\(?:\\(\\*\\*\\|[*>]\\)[*>]?\\)")
-           ;; (42 . ".\\(?:\\(\\*\\*\\|[*/>]\\).?\\)")
-           (43  . ".\\(?:\\([>]\\)>?\\)")
-           ;; (43 . ".\\(?:\\(\\+\\+\\|[+>]\\).?\\)")
-           (45  . ".\\(?:\\(-[->]\\|<<\\|>>\\|[-<>|~]\\)[-<>|~]?\\)")
-           ;; (46 . ".\\(?:\\(\\.[.<]\\|[-.=]\\)[-.<=]?\\)")
-           (46  . ".\\(?:\\(\\.<\\|[-=]\\)[-<=]?\\)")
-           (47  . ".\\(?:\\(//\\|==\\|[=>]\\)[/=>]?\\)")
-           ;; (47 . ".\\(?:\\(//\\|==\\|[*/=>]\\).?\\)")
-           (48  . ".\\(?:x[a-zA-Z]\\)")
-           (58  . ".\\(?:\\(::\\|[:<=>]\\)[:<=>]?\\)")
-           (59  . ".\\(?:\\(;\\);?\\)")
-           (60  . ".\\(?:\\(!--\\|\\$>\\|\\*>\\|\\+>\\|-[-<>|]\\|/>\\|<[-<=]\\|=[<>|]\\|==>?\\||>\\||||?\\|~[>~]\\|[$*+/:<=>|~-]\\)[$*+/:<=>|~-]?\\)")
-           (61  . ".\\(?:\\(!=\\|/=\\|:=\\|<<\\|=[=>]\\|>>\\|[=>]\\)[=<>]?\\)")
-           (62  . ".\\(?:\\(->\\|=>\\|>[-=>]\\|[-:=>]\\)[-:=>]?\\)")
-           (63  . ".\\(?:\\([.:=?]\\)[.:=?]?\\)")
-           (91  . ".\\(?:\\(|\\)[]|]?\\)")
-           ;; (92 . ".\\(?:\\([\\n]\\)[\\]?\\)")
-           (94  . ".\\(?:\\(=\\)=?\\)")
-           (95  . ".\\(?:\\(|_\\|[_]\\)_?\\)")
-           (119 . ".\\(?:\\(ww\\)w?\\)")
-           (123 . ".\\(?:\\(|\\)[|}]?\\)")
-           (124 . ".\\(?:\\(->\\|=>\\||[-=>]\\||||*>\\|[]=>|}-]\\).?\\)")
-           (126 . ".\\(?:\\(~>\\|[-=>@~]\\)[-=>@~]?\\)"))))
-    (dolist (char-regexp alist)
-      (set-char-table-range composition-ligature-table (car char-regexp)
-                            `([,(cdr char-regexp) 0 font-shape-gstring]))))
-  (set-char-table-parent composition-ligature-table composition-function-table))
+;; (use-package composite
+;;   :ensure nil
+;;   :init (defvar composition-ligature-table (make-char-table nil))
+;;   :hook (((prog-mode
+;;            conf-mode nxml-mode markdown-mode help-mode
+;;            shell-mode eshell-mode term-mode vterm-mode)
+;;           . (lambda () (setq-local composition-function-table composition-ligature-table))))
+;;   :config
+;;   ;; support ligatures, some toned down to prevent hang
+;;   (let ((alist
+;;          '((33  . ".\\(?:\\(==\\|[!=]\\)[!=]?\\)")
+;;            (35  . ".\\(?:\\(###?\\|_(\\|[(:=?[_{]\\)[#(:=?[_{]?\\)")
+;;            (36  . ".\\(?:\\(>\\)>?\\)")
+;;            (37  . ".\\(?:\\(%\\)%?\\)")
+;;            (38  . ".\\(?:\\(&\\)&?\\)")
+;;            (42  . ".\\(?:\\(\\*\\*\\|[*>]\\)[*>]?\\)")
+;;            ;; (42 . ".\\(?:\\(\\*\\*\\|[*/>]\\).?\\)")
+;;            (43  . ".\\(?:\\([>]\\)>?\\)")
+;;            ;; (43 . ".\\(?:\\(\\+\\+\\|[+>]\\).?\\)")
+;;            (45  . ".\\(?:\\(-[->]\\|<<\\|>>\\|[-<>|~]\\)[-<>|~]?\\)")
+;;            ;; (46 . ".\\(?:\\(\\.[.<]\\|[-.=]\\)[-.<=]?\\)")
+;;            (46  . ".\\(?:\\(\\.<\\|[-=]\\)[-<=]?\\)")
+;;            (47  . ".\\(?:\\(//\\|==\\|[=>]\\)[/=>]?\\)")
+;;            ;; (47 . ".\\(?:\\(//\\|==\\|[*/=>]\\).?\\)")
+;;            (48  . ".\\(?:x[a-zA-Z]\\)")
+;;            (58  . ".\\(?:\\(::\\|[:<=>]\\)[:<=>]?\\)")
+;;            (59  . ".\\(?:\\(;\\);?\\)")
+;;            (60  . ".\\(?:\\(!--\\|\\$>\\|\\*>\\|\\+>\\|-[-<>|]\\|/>\\|<[-<=]\\|=[<>|]\\|==>?\\||>\\||||?\\|~[>~]\\|[$*+/:<=>|~-]\\)[$*+/:<=>|~-]?\\)")
+;;            (61  . ".\\(?:\\(!=\\|/=\\|:=\\|<<\\|=[=>]\\|>>\\|[=>]\\)[=<>]?\\)")
+;;            (62  . ".\\(?:\\(->\\|=>\\|>[-=>]\\|[-:=>]\\)[-:=>]?\\)")
+;;            (63  . ".\\(?:\\([.:=?]\\)[.:=?]?\\)")
+;;            (91  . ".\\(?:\\(|\\)[]|]?\\)")
+;;            ;; (92 . ".\\(?:\\([\\n]\\)[\\]?\\)")
+;;            (94  . ".\\(?:\\(=\\)=?\\)")
+;;            (95  . ".\\(?:\\(|_\\|[_]\\)_?\\)")
+;;            (119 . ".\\(?:\\(ww\\)w?\\)")
+;;            (123 . ".\\(?:\\(|\\)[|}]?\\)")
+;;            (124 . ".\\(?:\\(->\\|=>\\||[-=>]\\||||*>\\|[]=>|}-]\\).?\\)")
+;;            (126 . ".\\(?:\\(~>\\|[-=>@~]\\)[-=>@~]?\\)"))))
+;;     (dolist (char-regexp alist)
+;;       (set-char-table-range composition-ligature-table (car char-regexp)
+;;                             `([,(cdr char-regexp) 0 font-shape-gstring]))))
+;;   (set-char-table-parent composition-ligature-table composition-function-table))
 
 
 (provide 'init-ui)

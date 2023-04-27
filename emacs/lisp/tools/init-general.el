@@ -61,6 +61,10 @@
   ;; activate C-a C-e in insert state
   "C-a" '(move-beginning-of-line :wk "move-begin")
   "C-e" '(move-end-of-line :wk "move-end")
+  "C-S-<left>"  '(shrink-window-horizontally :wk "shrink-window-horizontally")
+  "C-S-<right>" '(enlarge-window-horizontally :wk "enlarge-window-horizontally")
+  "C-S-<down>"  '(shrink-window :wk "shrink-window")
+  "C-S-<up>"    '(enlarge-window :wk "enlarge-window")
 
   ;; remap C-r
   "C-r" '(undo-redo :wk "undo-redo")

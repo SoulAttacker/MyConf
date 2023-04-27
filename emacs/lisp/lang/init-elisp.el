@@ -27,6 +27,11 @@
 (use-package rainbow-mode
   :hook (emacs-lisp-mode . rainbow-mode))
 
+;; (use-package slime
+;;   :defer t
+;;   :config
+;;   (setq inferior-lisp-program "sbcl"))
+
 (provide 'init-elisp)
 ;;; init-elisp.el ends here
 

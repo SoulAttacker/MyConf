@@ -55,7 +55,7 @@
         lsp-ui-peek-always-show t
         lsp-ui-doc-show-with-cursor t
         lsp-ui-sideline-enable t
-        lsp-ui-sideline-show-diagnostics nil
+        lsp-ui-sideline-show-diagnostics t
         )
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
   (add-hook 'lsp-ui-mode-hook 'lsp-modeline-code-actions-mode))

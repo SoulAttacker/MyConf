@@ -33,25 +33,25 @@
 (use-package treemacs-evil
   :after treemacs)
 
-(use-package treemacs-devicons
-  :after treemacs
-  :straight (treemacs-devicons
-             :type git :host github :repo "rainstormstudio/treemacs-devicons")
-  :config
-  (treemacs-load-theme "devicons")
-
-  ;; dired
-  (defun treemacs-icons-dired--display ()
-    "Display the icons of files in a Dired buffer."
-    (when (and ;;(display-graphic-p)
-           (not treemacs-icons-dired-displayed)
-           dired-subdir-alist)
-      (setq-local treemacs-icons-dired-displayed t)
-      (setq-local treemacs-icons (treemacs-theme->gui-icons treemacs--current-theme))
-      (pcase-dolist (`(,path . ,pos) dired-subdir-alist)
-        (treemacs-icons-dired--display-icons-for-subdir path pos))))
-
-  )
+;; (use-package treemacs-devicons
+;;   :after treemacs
+;;   :straight (treemacs-devicons
+;;              :type git :host github :repo "rainstormstudio/treemacs-devicons")
+;;   :config
+;;   (treemacs-load-theme "devicons")
+;; 
+;;   ;; dired
+;;   (defun treemacs-icons-dired--display ()
+;;     "Display the icons of files in a Dired buffer."
+;;     (when (and ;;(display-graphic-p)
+;;            (not treemacs-icons-dired-displayed)
+;;            dired-subdir-alist)
+;;       (setq-local treemacs-icons-dired-displayed t)
+;;       (setq-local treemacs-icons (treemacs-theme->gui-icons treemacs--current-theme))
+;;       (pcase-dolist (`(,path . ,pos) dired-subdir-alist)
+;;         (treemacs-icons-dired--display-icons-for-subdir path pos))))
+;; 
+;;   )
 
 (provide 'init-treemacs)
 ;;; init-treemacs.el ends here

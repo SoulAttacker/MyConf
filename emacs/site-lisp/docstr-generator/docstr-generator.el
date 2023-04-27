@@ -1,9 +1,9 @@
-;;; init-esup.el --- esup configuration              -*- lexical-binding: t; -*-
+;;; docstr-generator.el --- docstr generator         -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
-;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: esup
+;; Author: soulwalker
+;; Keywords: docstr
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,9 +24,22 @@
 
 ;;; Code:
 
+(require 'treesit)
 
-(use-package esup
-  :defer t)
+(defgroup docstr-generator nil
+  "Docstring generator."
+  :group 'docstr-generator)
 
-(provide 'init-esup)
-;;; init-esup.el ends here
+(defcustom docstr-c-style 'google
+  "C style"
+  :group 'docstr-generator)
+
+(defun docstr-generator-insert ()
+  "Insert docstring"
+  (interactive)
+
+  (message (treesit-parse-string (thing-at-point 'line)))
+)
+
+(provide 'docstr-generator)
+;;; docstr-generator.el ends here

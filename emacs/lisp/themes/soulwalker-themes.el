@@ -636,7 +636,7 @@
     (imenu-list-entry-face-2 :foreground yellow)
     (imenu-list-entry-subalist-face-2 :inherit 'imenu-list-entry-face-2 :weight 'bold)
     ;;;; indent-guide
-    ;; ((indent-guide-face &inherit highlight-indentation-face))
+    ((indent-guide-face &inherit highlight-indentation-face))
     ;;;; isearch <built-in>
     (isearch :inherit 'lazy-highlight :weight 'bold)
     (isearch-fail :background error :foreground base0 :weight 'bold)
